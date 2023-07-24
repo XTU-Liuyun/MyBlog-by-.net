@@ -15,4 +15,11 @@
     <ProjectReference Include="..\MyBlog.Model\MyBlog.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Areas\Admin\Views\Home\Top.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

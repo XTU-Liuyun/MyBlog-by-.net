@@ -9,5 +9,17 @@ namespace MyBlog.Web.Areas.Adnn1n.Controllers
         {
             return View();
         }
+        public IActionResult Top()
+        {
+            return View();
+        }
+        public IActionResult Left()
+        {
+            return View();
+        }
+        public IActionResult Welcome()
+        {
+            return View();
+        }
     }
 }
