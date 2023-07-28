@@ -5,6 +5,554 @@
       "PackagePath": "staticwebassets\\MyBlog.Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\css\\select.css",
+      "PackagePath": "staticwebassets\\adminstyle\\css\\select.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\css\\style.css",
+      "PackagePath": "staticwebassets\\adminstyle\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\001.jpg",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\001.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\404.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\404.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\add.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\add.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\btnbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\btnbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\btnbg1.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\btnbg1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\btnbg2.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\btnbg2.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\buttonbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\buttonbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\c01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\c01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\c02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\c02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\c03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\c03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\cbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\cbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\clist.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\clist.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\close.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\close.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\close1.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\close1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\cloud.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\cloud.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d06.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d06.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\d07.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\d07.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\diskbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\diskbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\dp.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\dp.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\f01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\f01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\f02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\f02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\f03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\f03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\f04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\f04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\f05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\f05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\f06.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\f06.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\help.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\help.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i06.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i06.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i07.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i07.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i08.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i08.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\i09.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\i09.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\iadd.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\iadd.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ibtnbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ibtnbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ico01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ico01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ico02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ico02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ico03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ico03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ico04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ico04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ico05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ico05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ico06.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ico06.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\icon01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\icon01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\icon02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\icon02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\icon03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\icon03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\icon04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\icon04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\icon05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\icon05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\icon06.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\icon06.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img06.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img06.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img07.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img07.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img08.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img08.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img09.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img09.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img10.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img10.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img11.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img11.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img12.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img12.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img13.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img13.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img14.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img14.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\img15.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\img15.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\inputbg.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\inputbg.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\itabbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\itabbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\itabbg1.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\itabbg1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftico.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftico.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftico01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftico01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftico02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftico02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftico03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftico03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftico04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftico04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftline.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftline.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\leftmenubg.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\leftmenubg.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\lefttop.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\lefttop.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\libg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\libg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\light.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\light.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\line.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\line.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\line1.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\line1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\list.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\list.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\list1.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\list1.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\list2.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\list2.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginbg1.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginbg1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginbg2.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginbg2.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginbg3.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginbg3.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\logininfo.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\logininfo.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginlogo.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginlogo.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginpassword.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginpassword.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginsj.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginsj.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\loginuser.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\loginuser.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\logo.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\msg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\msg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\navbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\navbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\next.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\next.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\pre.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\pre.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\px.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\px.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\righttop.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\righttop.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\rlist.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\rlist.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\search.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\search.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\sj.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\sj.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\sun.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\sun.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\t01.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\t01.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\t02.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\t02.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\t03.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\t03.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\t04.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\t04.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\t05.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\t05.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\tbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\tbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\tcbg.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\tcbg.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\th.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\th.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ticon.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ticon.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\time.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\time.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\toolbg.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\toolbg.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\topbg.gif",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\topbg.gif"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\topleft.jpg",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\topleft.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\topright.jpg",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\topright.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ub1.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ub1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\uew_icon.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\uew_icon.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\uew_icon_hover.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\uew_icon_hover.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\ulist.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\ulist.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\user.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\user.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\images\\userbg.png",
+      "PackagePath": "staticwebassets\\adminstyle\\images\\userbg.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\PIE.htc",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\PIE.htc"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\cloud.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\cloud.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\format+zh_CN,default,corechart.I.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\format+zh_CN,default,corechart.I.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\jquery.ba-resize.min.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\jquery.ba-resize.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\jquery.gvChart-1.0.1.min.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\jquery.gvChart-1.0.1.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\jquery.idTabs.min.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\jquery.idTabs.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\jquery.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\jsapi.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\jsapi.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\adminstyle\\js\\select-ui.min.js",
+      "PackagePath": "staticwebassets\\adminstyle\\js\\select-ui.min.js"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +563,46 @@
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\css\\layui.css",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\css\\layui.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\font\\iconfont.eot",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\font\\iconfont.eot"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\font\\iconfont.svg",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\font\\iconfont.svg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\font\\iconfont.ttf",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\font\\iconfont.ttf"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\font\\iconfont.woff",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\font\\iconfont.woff"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\font\\iconfont.woff2",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\font\\iconfont.woff2"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\layui\\layui.js",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\layui\\layui.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\test.html",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\test.html"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\免责声明.url",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\免责声明.url"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\layui-v2.8.11\\官方文档.url",
+      "PackagePath": "staticwebassets\\layui-v2.8.11\\官方文档.url"
     },
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\lib\\bootstrap\\LICENSE",
