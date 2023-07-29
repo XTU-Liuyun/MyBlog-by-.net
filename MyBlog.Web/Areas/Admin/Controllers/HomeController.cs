@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MyBlog.Web.Areas.Adnn1n.Controllers
+namespace MyBlog.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class HomeController : Controller

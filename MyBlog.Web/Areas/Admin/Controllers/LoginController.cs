@@ -2,9 +2,10 @@
 
 namespace MyBlog.Web.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class LoginController : Controller
     {
-        [Area("Admin")]
+        
         public IActionResult Index()
         {
             return View();

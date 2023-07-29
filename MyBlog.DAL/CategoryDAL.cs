@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using MyBlog.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,7 +67,7 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 var post = connection.Query<Model.Category>("select * from Category where id = @id",
-                  new { id = 1 }).First();
+                  new { id = id }).First();
                 return post;
             }
         }
@@ -81,6 +82,20 @@ namespace MyBlog.DAL
             {
                 int res = connection.Execute(@"update Category set Name=@Name,Number=@Number,PNumber=@PNumber,Remark=@Remark where id=@id", new { Name = element.Name, Number = element.Number, PNumber = element.PNumber, Remark = element.Remark,id=element.ID});
                     return res;
+            }
+        }
+        /// <summary>
+        /// 根据分类编号取实体类 
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public Category GetModelNumber(string number)
+        {
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                var post = connection.Query<Model.Category>("select * from Category where Number=@bh",
+                  new {bh= number }).First();
+                return post;
             }
         }
     }
