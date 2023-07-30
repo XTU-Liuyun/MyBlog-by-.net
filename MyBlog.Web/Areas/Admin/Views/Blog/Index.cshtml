@@ -1,4 +1,4 @@
-﻿@model List<MyBlog.Model.Blog>
+﻿@*model List<MyBlog.Model.Blog>*@
 <blockquote class="layui-elem-quote">
 	文章管理
 </blockquote>
@@ -16,8 +16,8 @@
 				<th>管理</th>
 			</tr>
 		</thead>
-		<tbody>
-			@foreach(var blog in Model)
+		<tbody id="tbody">
+			@*foreach(var blog in Model)
 			{
 				<tr>
 					<td>@blog.CreateDate.ToString("yyyy-MM-dd HH:mm")</td>
@@ -29,13 +29,90 @@
 							<i class="layui-icon">&#xe642;</i>
 							编辑
 						</a>
-						<a href="/admin/Blog/Delete/@blog.ID" onclick="return confirm('是否确认删除?')">
+						<a href="javascript:void(0);" onclick="delet(@blog.ID)">
 							<i class="layui-icon">&#xe693;</i>
 							删除
 						</a>
 					</td>
 				</tr>
-			}
+			}*@
 		</tbody>
 	</table>
+	<div id="demo-laypage-all">
+
+	</div>
 </div>
+<script>
+	var pagesize = 10;
+	layui.use(function () 
+	{
+		var laypage = layui.laypage,layer=layui.layer,$=layui.jquery;
+		var url="/admin/blog/GetTotalCount?t="+new Date().valueOf();
+		$.post(url, function (count) 
+		{
+			
+			console.log("页数为" + count);
+			laypage.render
+			({
+				elem: 'demo-laypage-all', // 元素 id
+				count:count, // 数据总数
+				layout: [ 'prev', 'page', 'next',  'refresh', 'skip'], // 功能布局
+				jump: function (obj) 
+				{
+					var pageindex=obj.curr;
+					//读取后台
+					load_blog_data(pageindex);
+				}
+			});
+		});
+		// 完整显示
+	});
+	function load_blog_data(pageindex)
+	{
+		console.log("加载："+pageindex);
+		layui.use('layer',function()
+		{
+			var $=layui.jquery,layer=layui.layer;
+			var url = "/admin/blog/list?pageindex=" + pageindex + "&pagesize=" + pagesize;
+			$.post(url, function (json) 
+			{
+				var html = '';
+				$.each(json,function(i,blog){
+					html += '<tr>';
+					html += '	<td>' + blog.createDate + '</td>';
+					html += '	<td>' + blog.title + '</td>';
+					html += '	<td>' + blog.name + '</td>';
+					html += '	<td>' + blog.visitNum + '</td>';
+					html += '	<td>';
+					html += '		<a href="/admin/Blog/Add/' + blog.id+ '"  > <i class="layui-icon" >&#xe642</i>编辑</a > ';
+					html += '		<a href = "javascript:void(0);" onclick = "delet(' + blog.id + ')" >';
+					html += '		<i class="layui-icon" >&#xe693; </i>';
+					html += '		删除';
+					html += '		</a>';
+					html += '	</td>';
+					html += '</tr>';
+				})
+				
+				$('#tbody').html(html);
+			}, 'json')
+		})
+		
+	}
+
+	function delet(id)
+	{
+		layui.use('layer',function()
+		{
+			var layer=layui.layer;
+			var $=layui.jquery;
+			layer.confirm('是否确认删除?',function()
+			{
+				var url="/Admin/Blog/Delete/"+id;
+				$.post(url,function(data)
+				{
+					layer.alert(data,function(){location.reload();});
+				})
+			})
+		})
+	}
+</script>

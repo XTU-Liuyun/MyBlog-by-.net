@@ -113,5 +113,53 @@ namespace MyBlog.DAL
                  return res;
             }
         }
-    }
+        /// <summary>
+        /// 计算记录数
+        /// </summary>
+        /// <param name="v"></param>
+        /// <returns></returns>
+       
+		public int CalcCount(string cond)
+		{
+            string sql = "select count(1) from blog";
+            if(!string.IsNullOrEmpty(cond))
+            {
+                sql += $"where {cond}";
+            }
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				int res = connection.ExecuteScalar<int>(sql);
+				return res;
+			}
+		}
+		///<summary>
+		///分页，使用offset,mssql2012以后有用
+		/// </summary> 
+		/// <param name="orderstr">如：yydate desc,yytime asc,id desc,必须形成唯一性</param>
+		/// <param name="PageSize">页大小</param>
+		/// <param name="PageIndex">页索引</param>
+		/// <param name="strWhere">条件</param>
+		/// <returns></returns>
+		public List<Model.Blog> GetList(string orderstr, int PageSize, int PageIndex, string strWhere)
+		{
+			if (!string.IsNullOrEmpty(strWhere))
+			{
+				strWhere = " where " + strWhere;
+			}
+			string sql = string.Format
+                (
+					"select * from [blog] {0} order by {1} offset {2} rows fetch next {3} rows only",
+					strWhere,
+					orderstr,
+					(PageIndex - 1) * PageSize,
+					PageSize
+				);
+			List<Model.Blog> list = new List<Model.Blog>();
+			using (var connection =ConnectFactory.GetOpenConnection())
+			{
+				list = connection.Query<Model.Blog>(sql).ToList();
+			}
+			return list;
+		}
+	}
 }
