@@ -7,6 +7,11 @@ namespace MyBlog.Web.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
+            int?adminid=HttpContext.Session.GetInt32("adminid");
+            if(adminid==null)
+            {
+                return Redirect("/admin/Login/");
+            }
             return View();
         }
         public IActionResult Top()

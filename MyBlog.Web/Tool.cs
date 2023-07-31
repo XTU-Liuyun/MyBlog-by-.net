@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace MyBlog.Web
 {
@@ -53,6 +55,22 @@ namespace MyBlog.Web
 			}
 			return oldStr;
 		}
-	}
+        /// <summary>
+        /// MD5加密
+        /// </summary>
+        /// <param></param>
+        /// <returns></returns>
+        public static string MD5Hash(string input)
+        {
+            using (var md5 = MD5.Create())
+            {
+                var result = md5.ComputeHash(Encoding.ASCII.GetBytes(input));
+                var strResult = BitConverter.ToString(result);
+                return strResult.Replace("-", "");
+            }
+        }
+    }
 	
+
+
 }

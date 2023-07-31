@@ -67,7 +67,7 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 var post = connection.Query<Model.Category>("select * from Category where id = @id",
-                  new { id = id }).First();
+                  new { id = id }).FirstOrDefault();
                 return post;
             }
         }

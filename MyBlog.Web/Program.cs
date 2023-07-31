@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddSession();//使用了session
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -10,6 +10,9 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+
+app.UseSession();//使用了session
 app.UseStaticFiles();
 
 app.UseRouting();
