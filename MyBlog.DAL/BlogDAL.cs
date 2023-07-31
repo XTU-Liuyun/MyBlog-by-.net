@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
@@ -121,14 +122,16 @@ namespace MyBlog.DAL
        
 		public int CalcCount(string cond)
 		{
-            string sql = "select count(1) from blog";
+			Console.WriteLine("1该cond为:" + cond);
+			string sql = "select count(1) from blog ";
             if(!string.IsNullOrEmpty(cond))
             {
                 sql += $"where {cond}";
             }
+            Console.WriteLine("该sql为"+sql);
 			using (var connection = ConnectFactory.GetOpenConnection())
 			{
-				int res = connection.ExecuteScalar<int>(sql);
+				int res = connection.ExecuteScalar<int>(sql);   
 				return res;
 			}
 		}

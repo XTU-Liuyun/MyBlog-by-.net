@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Connections;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
 using MyBlog.DAL;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace MyBlog.Web.Areas.Admin.Controllers
 {
@@ -12,6 +14,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 		DAL.CategoryDAL cadal = new DAL.CategoryDAL();	
 		public IActionResult Index()
 		{
+			ViewBag.calist = cadal.GetList("");
 			return View();
 		}
 		/// <summary>
@@ -19,19 +22,53 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
-		public IActionResult GetTotalCount()
+		public IActionResult GetTotalCount(string key,string start,string end,string number)
 		{
-			int totalCount = dal.CalcCount("");
+			
+			int totalCount = dal.CalcCount(GetCond(key,start,end,number));
 			return Content(totalCount.ToString());
-
 		}
-		public IActionResult List(int pageindex,int pagesize)
+
+		public string GetCond(string key,string start,string end,string number)
 		{
-			List<Model.Blog> list = dal.GetList("sort asc,id desc", pagesize, pageindex, "");
+			string cond = "1=1";
+			if (!string.IsNullOrEmpty(key))
+			{
+				key = Tool.GetSafeSQL(key);
+				cond += $" and title like '%{key}%'";
+			}
+			if (!string.IsNullOrEmpty(start))
+			{
+				DateTime d;
+				if (DateTime.TryParse(start, out d))
+				{
+					cond += $" and createdate>='{d.ToString("yyyy-MM-dd")}'";
+				}
+			}
+			if (!string.IsNullOrEmpty(end))
+			{
+				DateTime d;
+				if (DateTime.TryParse(end, out d))
+				{
+					cond += $" and createdate<='{d.ToString("yyyy-MM-dd")}'";
+				}
+			}
+			if (!string.IsNullOrEmpty(number))
+			{
+				number = Tool.GetSafeSQL(number);
+				cond += $" and number='{number}'";
+			}
+			Console.WriteLine("该cond为:"+cond);
+			return cond;
+		}
+
+		public IActionResult List(int pageindex,int pagesize, string key, string start, string end, string number)
+		{
+			List<Model.Blog> list = dal.GetList("sort asc,id desc", pagesize, pageindex,GetCond(key,start,end,number));
 			ArrayList arr=new ArrayList();
 			foreach(var item in list)
 			{
-				arr.Add(new {id=item.ID,title=item.Title,createDate=item.CreateDate.ToString("yyyy-MM-dd HH:mm"),visitNum=item.VisitNum,name=item.Name});
+				arr.Add(new {id=item.ID,title=item.Title,createDate=item.CreateDate.ToString("yyyy-MM-dd"),visitNum=item.VisitNum,name=item.Name});
 			}
 			
 			return Json(arr);
