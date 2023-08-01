@@ -87,7 +87,7 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 var post = connection.Query<Model.Blog>("select * from Blog where id = @id",
-                  new { id =id }).First();
+                  new { id = id }).FirstOrDefault ();
                 return post;
             }
         }
@@ -160,6 +160,7 @@ namespace MyBlog.DAL
 			List<Model.Blog> list = new List<Model.Blog>();
 			using (var connection =ConnectFactory.GetOpenConnection())
 			{
+                Console.Write(sql);
 				list = connection.Query<Model.Blog>(sql).ToList();
 			}
 			return list;

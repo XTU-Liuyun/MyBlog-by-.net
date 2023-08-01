@@ -553,6 +553,310 @@
       "PackagePath": "staticwebassets\\adminstyle\\js\\select-ui.min.js"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\about.css",
+      "PackagePath": "staticwebassets\\assets\\css\\about.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\blog.css",
+      "PackagePath": "staticwebassets\\assets\\css\\blog.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\gloable.css",
+      "PackagePath": "staticwebassets\\assets\\css\\gloable.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\index_style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\index_style.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\master.css",
+      "PackagePath": "staticwebassets\\assets\\css\\master.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\message.css",
+      "PackagePath": "staticwebassets\\assets\\css\\message.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\nprogress.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nprogress.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\timeline.css",
+      "PackagePath": "staticwebassets\\assets\\css\\timeline.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\HELP-US-OUT.txt",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\HELP-US-OUT.txt"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\animated.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\animated.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\core.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\core.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\fixed-width.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\font-awesome.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\icons.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\icons.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\larger.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\larger.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\list.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\list.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\mixins.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\path.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\path.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\screen-reader.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\screen-reader.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\stacked.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\less\\variables.less",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\less\\variables.less"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_animated.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_path.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font-awesome\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\assets\\font-awesome\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\barbarahand-webfont.eot",
+      "PackagePath": "staticwebassets\\assets\\font\\barbarahand-webfont.eot"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\barbarahand-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\font\\barbarahand-webfont.svg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\barbarahand-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\barbarahand-webfont.ttf"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\barbarahand-webfont.woff",
+      "PackagePath": "staticwebassets\\assets\\font\\barbarahand-webfont.woff"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\barbarahand-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\font\\barbarahand-webfont.woff2"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\lg.eot",
+      "PackagePath": "staticwebassets\\assets\\font\\lg.eot"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\lg.svg",
+      "PackagePath": "staticwebassets\\assets\\font\\lg.svg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\lg.ttf",
+      "PackagePath": "staticwebassets\\assets\\font\\lg.ttf"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\font\\lg.woff",
+      "PackagePath": "staticwebassets\\assets\\font\\lg.woff"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\1.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\2.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2018415193031394.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\2018415193031394.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\201842415510280.png",
+      "PackagePath": "staticwebassets\\assets\\image\\201842415510280.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\bg9.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\bg9.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\cover\\2018416205043154.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\cover\\2018416205043154.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\cover\\2019121192339714.png",
+      "PackagePath": "staticwebassets\\assets\\image\\cover\\2019121192339714.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\page\\shareicon.png",
+      "PackagePath": "staticwebassets\\assets\\image\\page\\shareicon.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\page\\weixin.png",
+      "PackagePath": "staticwebassets\\assets\\image\\page\\weixin.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\index.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\message.js",
+      "PackagePath": "staticwebassets\\assets\\js\\message.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\pagecomment.js",
+      "PackagePath": "staticwebassets\\assets\\js\\pagecomment.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\pagediary.js",
+      "PackagePath": "staticwebassets\\assets\\js\\pagediary.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\pagemessage.js",
+      "PackagePath": "staticwebassets\\assets\\js\\pagemessage.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\plugins\\blogbenoitboucart.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\blogbenoitboucart.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\plugins\\nprogress.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\nprogress.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\plugins\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\wow.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\yss\\APlayer.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\yss\\APlayer.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\yss\\article.js",
+      "PackagePath": "staticwebassets\\assets\\js\\yss\\article.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\yss\\gloable.js",
+      "PackagePath": "staticwebassets\\assets\\js\\yss\\gloable.js"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

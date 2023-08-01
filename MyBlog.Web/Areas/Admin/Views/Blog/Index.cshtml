@@ -80,7 +80,6 @@
 		var url="/admin/blog/GetTotalCount?t="+new Date().valueOf();
 		$.post(url, function (count) 
 		{
-			
 			console.log("页数为" + count);
 			laypage.render
 			({
