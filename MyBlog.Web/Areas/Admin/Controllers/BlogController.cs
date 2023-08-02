@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Connections;
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewEngines;
 using MyBlog.DAL;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,8 +9,12 @@ using System.Collections.Generic;
 namespace MyBlog.Web.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+	/// <summary>
+	/// 博客后台管理
+	/// </summary>
 	public class BlogController : Controller
 	{
+		
 		DAL.BlogDAL dal = new DAL.BlogDAL();
 		DAL.CategoryDAL cadal = new DAL.CategoryDAL();	
 		public IActionResult Index()
@@ -19,6 +24,16 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 			
 			return View();
 		}
+		
+		public IActionResult Category()
+		{
+			#region 生成结点数据json
+			ViewBag.nodejson = new DAL.CategoryDAL().GetTreeJson();
+			#endregion
+
+			return View();
+		}
+		
 		/// <summary>
 		/// 获取总记录数
 		/// </summary>

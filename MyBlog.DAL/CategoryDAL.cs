@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using MyBlog.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -98,5 +99,31 @@ namespace MyBlog.DAL
                 return post;
             }
         }
-    }
+        /// <summary>
+        /// 取所有分类数据拼成json
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+		public string GetTreeJson()
+		{
+            List<Model.TreeNode_LayUI> list_return = new List<TreeNode_LayUI>();
+			
+			List<Model.Category> list = GetList("");
+            var top = list.Where(a => a.PNumber == "0");
+            foreach (var item in top) 
+            {
+                Model.TreeNode_LayUI node=new TreeNode_LayUI() { id=item.ID ,title=item.Name,spread=true};
+				List<Model.TreeNode_LayUI> list_sub = new List<TreeNode_LayUI>();
+				var sub=list.Where(a => a.PNumber == item.Number);
+                foreach(var item2 in sub)
+                {
+					Model.TreeNode_LayUI node2 = new TreeNode_LayUI() { id = item2.ID, title = item2.Name, spread = true };
+                    list_sub.Add(node2);
+				}
+                node.children = list_sub;
+                list_return.Add(node);
+            }
+            return Newtonsoft.Json.JsonConvert.SerializeObject(list_return); 
+		}
+	}
 }
