@@ -15,6 +15,8 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 		public IActionResult Index()
 		{
 			ViewBag.calist = cadal.GetList("");
+			
+			
 			return View();
 		}
 		/// <summary>

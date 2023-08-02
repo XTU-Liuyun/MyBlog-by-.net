@@ -48,7 +48,7 @@ namespace MyBlog.DAL
         {
             using(var connection = ConnectFactory.GetOpenConnection())
             {
-                string sql = "select * from Category";
+                string sql = "select distinct * from Category";
                 if(!string.IsNullOrEmpty(cond))
                 {
                     sql += $" where {cond}";

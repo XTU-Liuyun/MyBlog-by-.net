@@ -108,7 +108,7 @@
 	}
 	function load_blog_data(pageindex)
 	{
-		console.log("加载："+pageindex);
+		//console.log("加载："+pageindex);
 		layui.use('layer',function()
 		{
 			var $=layui.jquery,layer=layui.layer;
@@ -116,7 +116,7 @@
 			var url = "/admin/blog/list?pageindex=" + pageindex + "&pagesize=" + pagesize;
 			$.post(url, postdata, function (json) 
 			{
-				console.log(postdata);
+				//console.log(postdata);
 				var html = '';
 				$.each(json,function(i,blog)
 				{
@@ -146,11 +146,11 @@
 		{
 			var laypage = layui.laypage, layer = layui.layer, $ = layui.jquery;
 			var postdata = getcond();
-			var url = "/admin/blog/GetTotalCount?t=" + new Date().valueOf();
+			var url = "/blog/GetTotalCount?t=" + new Date().valueOf();
 			$.post(url, postdata,function (count) 
 			{
 
-				console.log("页数为" + count);
+				//console.log("页数为" + count);
 				laypage.render
 					({
 						elem: 'demo-laypage-all', // 元素 id
