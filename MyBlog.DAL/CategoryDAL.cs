@@ -36,16 +36,20 @@ namespace MyBlog.DAL
         {
             using (var connection = ConnectFactory.GetOpenConnection())
             {
-                int res=connection.Execute(@"delete from Category where id = @id", new { id = id });
-                return res;
+                Console.WriteLine("delid=" + id);
+				int res2 = connection.Execute(@"delete from Category where pnumber = (select distinct number from category where id=@id)", new { id = id });
+				int res=connection.Execute(@"delete from Category where id = @id", new { id = id });
+                
+				return res+res2;
             }
         }
-        /// <summary>
-        /// 查询
-        /// </summary>
-        /// <param name="cond"></param>
-        /// <returns></returns>
-        public List<Model.Category> GetList(string cond) 
+		
+		/// <summary>
+		/// 查询
+		/// </summary>
+		/// <param name="cond"></param>
+		/// <returns></returns>
+		public List<Model.Category> GetList(string cond) 
         {
             using(var connection = ConnectFactory.GetOpenConnection())
             {
@@ -112,12 +116,12 @@ namespace MyBlog.DAL
             var top = list.Where(a => a.PNumber == "0");
             foreach (var item in top) 
             {
-                Model.TreeNode_LayUI node=new TreeNode_LayUI() { id=item.ID ,title=item.Name,spread=true};
+                Model.TreeNode_LayUI node=new TreeNode_LayUI() { id=item.ID ,title=item.Name,spread=true,pnumber=0};
 				List<Model.TreeNode_LayUI> list_sub = new List<TreeNode_LayUI>();
 				var sub=list.Where(a => a.PNumber == item.Number);
                 foreach(var item2 in sub)
                 {
-					Model.TreeNode_LayUI node2 = new TreeNode_LayUI() { id = item2.ID, title = item2.Name, spread = true };
+					Model.TreeNode_LayUI node2 = new TreeNode_LayUI() { id = item2.ID, title = item2.Name, spread = true,pnumber=item.ID };
                     list_sub.Add(node2);
 				}
                 node.children = list_sub;
@@ -125,5 +129,61 @@ namespace MyBlog.DAL
             }
             return Newtonsoft.Json.JsonConvert.SerializeObject(list_return); 
 		}
+		public int CalcCount(string cond)
+		{
+			
+			string sql = "select count(1) from category ";
+			if (!string.IsNullOrEmpty(cond))
+			{
+				sql += $"where {cond}";
+			}
+			
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				int res = connection.ExecuteScalar<int>(sql);
+				return res;
+			}
+		}
+		/// <summary>根据pbh生成下级的bh,自动+1,超过限制则返回文本
+		/// 
+		/// </summary>
+		/// <param name="pbh">父编号</param>
+		/// <param name="x">每一级编号的位数</param>
+		/// <returns></returns>
+		public string GenBH(string pbh, int x)
+		{
+			string sql = "select right(max(number)," + x + ") from category where pnumber=" + pbh;
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				string res = connection.ExecuteScalar<string>(sql);
+
+				if (string.IsNullOrEmpty(res))
+				{
+					int a = 1;
+					if (pbh != "0")
+					{
+						return pbh + a.ToString("d" + x);
+					}
+					return a.ToString("d" + x);
+				}
+				else
+				{
+					int a = int.Parse(res) + 1;
+					int b = (int)Math.Pow(10, x);
+					if (a >= b)
+					{
+						throw new Exception( "编号超过限制!");
+					}
+					if (pbh != "0")
+					{
+						return pbh + a.ToString("d" + x);
+					}
+					return a.ToString("d" + x);
+				}
+			}
+			
+			
+		}
+
 	}
 }

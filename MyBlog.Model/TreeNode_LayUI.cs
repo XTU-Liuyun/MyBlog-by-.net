@@ -15,5 +15,6 @@ namespace MyBlog.Model
 		public string title { set; get; }	
 		public bool spread { set; get; }
 		public List<TreeNode_LayUI> children { set; get; }	
+		public int pnumber { set; get; }
 	}
 }
