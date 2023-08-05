@@ -26,5 +26,24 @@ namespace MyBlog.DAL
                 return post;
             }
         }
+        /// <summary>
+        /// 获取管理员列表
+        /// </summary>
+        /// <param name="cond"></param>
+        /// <returns></returns>
+        public List<Model.Admin> GetList(string cond)
+        {
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                string sql = "select * from Admin";
+                if (!string.IsNullOrEmpty(cond))
+                {
+                    sql += $" where {cond}";
+                }
+                var list = connection.Query<Model.Admin>(sql).ToList();
+                return list;
+            }
+        }
     }
+    
 }

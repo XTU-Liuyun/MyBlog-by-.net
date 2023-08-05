@@ -23,7 +23,9 @@ namespace MyBlog.Web.Areas.Admin.Controllers
             }
             HttpContext.Session.SetInt32("adminid", admin.ID);
             HttpContext.Session.SetString("adminusername", admin.UserName);
+            
             return Redirect("/admin/home/index");
         }
+        
     }
 }

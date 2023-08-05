@@ -43,10 +43,10 @@
         <div class="loginbox">
             <form method="post" action="">
                 <ul>
-                    <li><input name="username" type="text" id="username" class="loginuser" value=""  required="required"/></li>
+                    <li><input name="username" type="text" class="loginuser" value=""  required="required"/></li>
                     <li><input name="password" type="password" id="password" class="loginpwd" value="" required="required" /></li>
                     <li>
-                        <input name="" type="submit" class="loginbtn" value="登录" />
+                        <input name="" type="submit" class="loginbtn" value="登录" onclick="loginpost()"/>
                     </li>
                 </ul>
             </form>
@@ -57,9 +57,20 @@
 
 
 
-    <div class="loginbm">版权所有&copy;2022 <a href="http://www.uimaker.com">uimaker.com</a> </div>
+    <div class="loginbm">版权所有&copy;2023 </div>
 
-
+    <script>
+        function loginpost() 
+        {
+            var $ = layui.jquery;
+            var url = "/admin/home/index";
+            var username=$("#username").val();
+            var postdata={username:username};
+            $.post(url, postdata,function()
+            {
+                console.log("postdata="+postdata);
+            });
+        }
+    </script>
 </body>
-
 </html>

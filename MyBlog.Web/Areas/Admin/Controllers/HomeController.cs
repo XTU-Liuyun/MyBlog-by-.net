@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections;
 
 namespace MyBlog.Web.Areas.Admin.Controllers
 {
@@ -24,7 +25,10 @@ namespace MyBlog.Web.Areas.Admin.Controllers
         }
         public IActionResult Welcome()
         {
-            return View();
+            DAL.AdminDAL admindal= new DAL.AdminDAL();
+            List<Model.Admin> list = admindal.GetList("");
+            return View(list);
         }
+        
     }
 }

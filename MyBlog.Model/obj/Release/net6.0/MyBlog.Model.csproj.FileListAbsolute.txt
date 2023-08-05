@@ -1,0 +1,12 @@
+D:\Knowledge\MyBlog\MyBlog.Model\bin\Release\net6.0\MyBlog.Model.deps.json
+D:\Knowledge\MyBlog\MyBlog.Model\bin\Release\net6.0\MyBlog.Model.dll
+D:\Knowledge\MyBlog\MyBlog.Model\bin\Release\net6.0\MyBlog.Model.pdb
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.csproj.AssemblyReference.cache
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.AssemblyInfoInputs.cache
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.AssemblyInfo.cs
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.csproj.CoreCompileInputs.cache
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.dll
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\refint\MyBlog.Model.dll
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\MyBlog.Model.pdb
+D:\Knowledge\MyBlog\MyBlog.Model\obj\Release\net6.0\ref\MyBlog.Model.dll
