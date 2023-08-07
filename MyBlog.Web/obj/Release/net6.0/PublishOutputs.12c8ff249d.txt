@@ -24,6 +24,18 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.CodeAnaly
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.CodeAnalysis.Workspaces.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.DiaSymReader.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Caching.Memory.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Logging.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Options.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.NET.StringTools.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Debugger.Contracts.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -34,6 +46,7 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStu
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\MySqlConnector.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Common.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Configuration.dll
@@ -44,6 +57,7 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Packaging.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.ProjectModel.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Protocol.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Versioning.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Composition.Convention.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Composition.Hosting.dll

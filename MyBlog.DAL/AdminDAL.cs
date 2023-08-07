@@ -35,7 +35,7 @@ namespace MyBlog.DAL
         {
             using (var connection = ConnectFactory.GetOpenConnection())
             {
-                string sql = "select * from Admin";
+                string sql = "select * from admin";
                 if (!string.IsNullOrEmpty(cond))
                 {
                     sql += $" where {cond}";

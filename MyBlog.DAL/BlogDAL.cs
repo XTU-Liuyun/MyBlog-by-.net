@@ -23,16 +23,16 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
 
-                int resid = connection.Query<int>(@"INSERT INTO [dbo].[Blog]
+                int resid = connection.Query<int>(@"INSERT INTO blog
            (
-           [Title]
-           ,[Body]
-           ,[Body_md]
-           ,[VisitNum]
-           ,[Number]
-           ,[Name]
-           ,[Remark]
-           ,[Sort])
+           Title
+           ,Body
+           ,Body_md
+           ,VisitNum
+           ,Number
+           ,Name
+           ,Remark
+           ,Sort)
      VALUES
            (@Title
 		   ,@Body
@@ -55,7 +55,7 @@ namespace MyBlog.DAL
         {
             using (var connection = ConnectFactory.GetOpenConnection())
             {
-                int res=connection.Execute(@"delete from Blog where id = @id", new { id = id });
+                int res=connection.Execute(@"delete from blog where id = @id", new { id = id });
                 return res;
             }
         }
@@ -68,7 +68,7 @@ namespace MyBlog.DAL
         {
             using(var connection = ConnectFactory.GetOpenConnection())
             {
-                string sql = "select * from Blog";
+                string sql = "select * from blog";
                 if(!string.IsNullOrEmpty(cond))
                 {
                     sql += $" where {cond}";
@@ -86,7 +86,7 @@ namespace MyBlog.DAL
         {
             using (var connection = ConnectFactory.GetOpenConnection())
             {
-                var post = connection.Query<Model.Blog>("select * from Blog where id = @id",
+                var post = connection.Query<Model.Blog>("select * from blog where id = @id",
                   new { id = id }).FirstOrDefault ();
                 return post;
             }
@@ -100,16 +100,16 @@ namespace MyBlog.DAL
         {
             using (var connection =ConnectFactory.GetOpenConnection())
             {
-                int res = connection.Execute(@"UPDATE [dbo].[Blog]
+                int res = connection.Execute(@"UPDATE blog
                                                SET 
-                                                  [Title] =@Title
-                                                  ,[Body] = @Body
-                                                  ,[Body_md] = @Body_md
-                                                  ,[VisitNum] = @VisitNum
-                                                  ,[Number] = @Number
-                                                  ,[Name] = @Name
-                                                  ,[Remark] = @Remark
-                                                  ,[Sort] = @Sort
+                                                  Title =@Title
+                                                  ,Body = @Body
+                                                  ,Body_md = @Body_md
+                                                  ,VisitNum = @VisitNum
+                                                  ,Number = @Number
+                                                  ,Name = @Name
+                                                  ,Remark = @Remark
+                                                  ,Sort = @Sort
                                              WHERE ID=@ID", element);
                  return res;
             }
@@ -149,14 +149,15 @@ namespace MyBlog.DAL
 			{
 				strWhere = " where " + strWhere;
 			}
-			string sql = string.Format
-                (
+            string sql = //mssql:/*string.Format
+                /*(
 					"select * from [blog] {0} order by {1} offset {2} rows fetch next {3} rows only",
 					strWhere,
 					orderstr,
 					(PageIndex - 1) * PageSize,
 					PageSize
-				);
+				);*/
+                $"select * from blog {strWhere} order by {orderstr} limit {(PageIndex - 1) * PageSize},{PageSize}";
 			List<Model.Blog> list = new List<Model.Blog>();
 			using (var connection =ConnectFactory.GetOpenConnection())
 			{

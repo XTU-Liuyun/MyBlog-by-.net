@@ -22,7 +22,7 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
 
-                int resid = connection.Query<int>(@"INSERT INTO Category(Name,Number,PNumber,Remark) VALUES (@Name,@Number,@PNumber,@Remark);select @@IDENTITY;",
+                int resid = connection.Query<int>(@"INSERT INTO category(Name,Number,PNumber,Remark) VALUES (@Name,@Number,@PNumber,@Remark);select @@IDENTITY;",
                  element).First();
                 return resid;
             }
@@ -37,8 +37,8 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 Console.WriteLine("delid=" + id);
-				int res2 = connection.Execute(@"delete from Category where pnumber = (select distinct number from category where id=@id)", new { id = id });
-				int res=connection.Execute(@"delete from Category where id = @id", new { id = id });
+				int res2 = connection.Execute(@"delete from category where pnumber = (select distinct number from category where id=@id)", new { id = id });
+				int res=connection.Execute(@"delete from category where id = @id", new { id = id });
                 
 				return res+res2;
             }
@@ -53,7 +53,7 @@ namespace MyBlog.DAL
         {
             using(var connection = ConnectFactory.GetOpenConnection())
             {
-                string sql = "select distinct * from Category";
+                string sql = "select distinct * from category";
                 if(!string.IsNullOrEmpty(cond))
                 {
                     sql += $" where {cond}";
@@ -71,7 +71,7 @@ namespace MyBlog.DAL
         {
             using (var connection = ConnectFactory.GetOpenConnection())
             {
-                var post = connection.Query<Model.Category>("select * from Category where id = @id",
+                var post = connection.Query<Model.Category>("select * from category where id = @id",
                   new { id = id }).FirstOrDefault();
                 return post;
             }
@@ -85,7 +85,7 @@ namespace MyBlog.DAL
         {
             using (var connection =ConnectFactory.GetOpenConnection())
             {
-                int res = connection.Execute(@"update Category set Name=@Name,Number=@Number,PNumber=@PNumber,Remark=@Remark where id=@id", new { Name = element.Name, Number = element.Number, PNumber = element.PNumber, Remark = element.Remark,id=element.ID});
+                int res = connection.Execute(@"update category set Name=@Name,Number=@Number,PNumber=@PNumber,Remark=@Remark where id=@id", new { Name = element.Name, Number = element.Number, PNumber = element.PNumber, Remark = element.Remark,id=element.ID});
                     return res;
             }
         }
@@ -98,7 +98,7 @@ namespace MyBlog.DAL
         {
             using (var connection = ConnectFactory.GetOpenConnection())
             {
-                var post = connection.Query<Model.Category>("select * from Category where Number=@bh",
+                var post = connection.Query<Model.Category>("select * from category where Number=@bh",
                   new {bh= number }).First();
                 return post;
             }

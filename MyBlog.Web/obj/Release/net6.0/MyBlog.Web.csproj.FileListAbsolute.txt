@@ -234,3 +234,17 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\refint\MyBlog.Web.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\MyBlog.Web.pdb
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\MyBlog.Web.genruntimeconfig.cache
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\ref\MyBlog.Web.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Logging.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Options.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\MySqlConnector.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Release\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
