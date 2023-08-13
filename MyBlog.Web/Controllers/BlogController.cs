@@ -14,7 +14,12 @@ namespace MyBlog.Web.Controllers
 		DAL.BlogDAL dal = new DAL.BlogDAL();
 		public IActionResult Artical(string key,string number)
 		{
-			ViewBag.calist = new DAL.CategoryDAL().GetList("");
+            int? userid = HttpContext.Session.GetInt32("userid");
+            if (userid == null)
+            {
+                return Redirect("/Home/Login/");
+            }
+            ViewBag.calist = new DAL.CategoryDAL().GetList("");
 			ViewBag.search_key = key;
 			ViewBag.search_number = number;
 			return View();

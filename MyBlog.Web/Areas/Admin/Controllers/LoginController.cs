@@ -13,7 +13,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Index(string username,string password)
         {
-            Console.WriteLine(username + ',' + password);
+           // Console.WriteLine(username + ',' + password);
             username=Tool.GetSafeSQL(username);
             password=Tool.MD5Hash(password);
             Model.Admin admin = new DAL.AdminDAL().Login(username,password);

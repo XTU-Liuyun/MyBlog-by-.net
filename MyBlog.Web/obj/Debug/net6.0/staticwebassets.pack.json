@@ -857,6 +857,10 @@
       "PackagePath": "staticwebassets\\assets\\js\\yss\\gloable.js"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\bg.jpg",
+      "PackagePath": "staticwebassets\\bg.jpg"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

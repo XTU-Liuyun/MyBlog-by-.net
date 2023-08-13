@@ -41,7 +41,7 @@ namespace MyBlog.DAL
 		   ,@Number
 		   ,@Name
 		   ,@Remark
-		   ,@Sort);select @@IDENTITY;",
+		   ,@Sort);SELECT LAST_INSERT_ID();",//sqlserver:select @@IDENTITY;,
                  element).First();
                 return resid;
             }

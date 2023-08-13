@@ -102,6 +102,24 @@ namespace MyBlog.Web
 			
 			return Htmlstring;
 		}
+		/// <summary>
+		/// 检查是否为合法邮箱
+		/// </summary>
+		/// <returns></returns>
+	    public static bool CheckEmail(string str)
+		{
+            if (string.IsNullOrWhiteSpace(str))
+                return false;
+            string[] emial = str.Split('@');
+            if (emial.Length == 2 && !string.IsNullOrWhiteSpace(emial[0]) && !string.IsNullOrWhiteSpace(emial[1]))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 	}
 	
 
