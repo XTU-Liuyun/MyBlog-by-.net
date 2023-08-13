@@ -20,6 +20,7 @@ namespace MyBlog.Web.Controllers
                 return Redirect("/Home/Login/");
             }
             ViewBag.calist = new DAL.CategoryDAL().GetList("");
+			ViewBag.toplist = new DAL.BlogDAL().GetTop10List();
 			ViewBag.search_key = key;
 			ViewBag.search_number = number;
 			return View();
@@ -48,6 +49,7 @@ namespace MyBlog.Web.Controllers
 			{
 				return Content("Error");
 			}
+			dal.AddVisted(id);
 			return View(b);
 		}
 		/// <summary>

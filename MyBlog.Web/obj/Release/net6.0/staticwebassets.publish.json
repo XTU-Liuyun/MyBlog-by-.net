@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Xv1DCEyp41cczoCOmblvfWt3nf2SfH/ulHqUXbzVtfA=",
+  "Hash": "ZFdwYM/egkbqCRHtP9/b0cD67cajry15ItifWQkSL4U=",
   "Source": "MyBlog.Web",
   "BasePath": "_content/MyBlog.Web",
   "Mode": "Default",
@@ -3670,6 +3670,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\yss\\gloable.js"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\bg.jpg",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "bg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bg.jpg"
     },
     {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\css\\site.css",

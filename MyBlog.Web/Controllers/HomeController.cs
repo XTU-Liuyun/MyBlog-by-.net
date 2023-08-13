@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyBlog.DAL;
 using MyBlog.Web.Models;
 using System.Diagnostics;
 using System.Text;
@@ -25,7 +26,10 @@ namespace MyBlog.Web.Controllers
         }
         public IActionResult Login()
         {
-            return View();
+            
+            HttpContext.Session.Remove("userid");
+			HttpContext.Session.Remove("username");
+			return View();
         }
         [HttpPost]
         public IActionResult Login(string username,string password)
@@ -42,6 +46,8 @@ namespace MyBlog.Web.Controllers
             }
             HttpContext.Session.SetInt32("userid", user.ID);
             HttpContext.Session.SetString("username", user.Name);
+            UserDAL userDAL = new DAL.UserDAL();
+            userDAL.UpdateLoginTime(user.ID);
             return Redirect("/blog/artical");
         }
 

@@ -22,10 +22,10 @@ namespace MyBlog.Model
         /// </summary>
         public string Password { get; set; }
         /// <summary>
-        /// 备注
+        /// 邮箱
         /// </summary>
         public string Email { get; set; }
 
-        
+        public DateTime LastLogin { get; set; } 
     }
 }

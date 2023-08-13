@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -64,15 +65,28 @@ namespace MyBlog.DAL
         /// </summary>
         /// <param name="cond"></param>
         /// <returns></returns>
-        public List<Model.Blog> GetList(string cond) 
+        public List<Model.Blog> GetList(string cond)
         {
-            using(var connection = ConnectFactory.GetOpenConnection())
+            using (var connection = ConnectFactory.GetOpenConnection())
             {
                 string sql = "select * from blog";
-                if(!string.IsNullOrEmpty(cond))
+                if (!string.IsNullOrEmpty(cond))
                 {
                     sql += $" where {cond}";
                 }
+                var list = connection.Query<Model.Blog>(sql).ToList();
+                return list;
+            }
+        }
+        /// <summary>
+        /// 获取前十文章
+        /// </summary>
+        /// <returns></returns>
+        public List<Model.Blog> GetTop10List()
+        {
+            string sql = "SELECT * from (SELECT id,Title,VisitNum,DENSE_RANK()over(ORDER BY VisitNum DESC) rank1 from blog) t1 WHERE t1.rank1<=10";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
                 var list = connection.Query<Model.Blog>(sql).ToList();
                 return list;
             }
@@ -166,5 +180,50 @@ namespace MyBlog.DAL
 			}
 			return list;
 		}
-	}
+        /// <summary>
+        /// 获取最后一篇文章时间
+        /// </summary>
+        /// <returns></returns>
+        public DateTime GetLastArticalTime()
+        {
+            string sql = "select max(CreateDate) from blog"; 
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                DateTime res = connection.ExecuteScalar<DateTime>(sql);
+                return res;
+            }
+        }
+        /// <summary>
+        /// 获取访问量
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public int GetTotalVisted(string time)
+        {
+            if (!string.IsNullOrEmpty(time))
+            {
+                time = " where " + time;
+            }
+            string sql = $"select sum(VisitNum) from blog {time}";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                int res = connection.ExecuteScalar<int>(sql);
+                return res;
+            }
+        }
+        /// <summary>
+        /// 访问数加1
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public int AddVisted(int id)
+        {
+            string sql = $"update blog set VisitNum=VisitNum+1 where id={id}";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                int res = connection.ExecuteScalar<int>(sql);
+                return res;
+            }
+        }
+    }
 }

@@ -1,5 +1,6 @@
 ﻿@{
-
+    MyBlog.DAL.BlogDAL blogdal = new MyBlog.DAL.BlogDAL();
+    MyBlog.DAL.UserDAL userdal = new MyBlog.DAL.UserDAL();
 }
 @model List<MyBlog.Model.Admin>
 <link href="~/layui-v2.8.11/layui/css/layui.css" rel="stylesheet" />
@@ -70,9 +71,11 @@
                             </div>
                             <h5>用户统计</h5>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
-                                <small>当前分类总记录数</small>
+                                <h1 class="no-margins">@userdal.GetUserNum("")</h1>
+                                <div class="stat-percent font-bold text-gray">
+                                    <i class="fa fa-commenting"></i> 
+                                    @userdal.GetUserNum("DATE_FORMAT(LastLogin, '%Y-%m-%d') IN (select DATE_SUB(curdate(),INTERVAL 0 DAY) day1 union select DATE_SUB(curdate(),INTERVAL -1 DAY) day2 union select DATE_SUB(curdate(),INTERVAL -2 DAY) day3 union select DATE_SUB(curdate(),INTERVAL -3 DAY) day4 union select DATE_SUB(curdate(),INTERVAL -4 DAY) day5 union select DATE_SUB(curdate(),INTERVAL -5 DAY) day6 union select DATE_SUB(curdate(),INTERVAL -6 DAY) day7);")</div>
+                                <small>最近7天活跃量</small>
                             </div>
                         </div>
                     </div>
@@ -89,9 +92,9 @@
                             </div>
                             <h5>文章统计</h5>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
-                                <small>当前分类总记录数</small>
+                                <h1 class="no-margins">@blogdal.CalcCount("")</h1>
+                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i>@blogdal.GetLastArticalTime()</div>
+                                <small>最后一篇文章时间</small>
                             </div>
                         </div>
                     </div>
@@ -108,9 +111,11 @@
                             </div>
                             <h5>访问统计</h5>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
-                                <small>当前分类总记录数</small>
+                                <h1 class="no-margins">@blogdal.GetTotalVisted("")</h1>
+                                <div class="stat-percent font-bold text-gray">
+                                    <i class="fa fa-commenting"></i>
+                                    @blogdal.GetTotalVisted("CreateDate LIKE CONCAT(DATE_FORMAT(NOW(), '%Y-%m-%d'), '%');")</div>
+                                <small>今日访问数</small>
                             </div>
                         </div>
                     </div>

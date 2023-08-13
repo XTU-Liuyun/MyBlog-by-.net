@@ -19,7 +19,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
             Model.Admin admin = new DAL.AdminDAL().Login(username,password);
             if(admin == null) 
             {
-                return Content("登录失败,用户名或者密码错误！");
+                return Content("登录失败,用户名或者密码错误!");
             }
             HttpContext.Session.SetInt32("adminid", admin.ID);
             HttpContext.Session.SetString("adminusername", admin.UserName);

@@ -19,6 +19,12 @@
 	<link rel="stylesheet" href="/assets/css/gloable.css" />
 	<link rel="stylesheet" href="/assets/css/nprogress.css" />
 	<link rel="stylesheet" href="/assets/css/blog.css" />
+	<style>
+	user
+	{
+	right:0%;display:block;position:absolute;padding-top:16px;
+	}
+	</style>
 </head>
 <body>
 	<div class="header">
@@ -26,19 +32,24 @@
 	<header class="gird-header">
 		<div class="header-fixed">
 			<div class="header-inner">
-				<a href="javascript:void(0)" class="header-logo" id="logo">Mr.Yss</a>
+				<a href="javascript:void(0)" class="header-logo" id="logo">Liuyun</a>
 				<nav class="nav" id="nav">
 					<ul>
 						<li><a href="/home/index">首页</a></li>
 						<li><a href="article.html">博客</a></li>
 						<li><a href="message.html">留言</a></li>
 						<li><a href="link.html">友链</a></li>
+						<li><a href="/Home/login">退出</a></li>
 					</ul>
 				</nav>
+				<div style="right:0%;display:block;position:absolute;padding-top:16px;font-size:18px;font-family:KaiTi">
+					欢迎你,@base.Context.Session.GetString("username")
+					
+				</div>
 				
 				<a class="phone-menu">
 					<i></i>
-					<i></i>
+					<i ></i>
 					<i></i>
 				</a>
 			</div>
@@ -97,10 +108,10 @@
 						<h5 class="other-item-title">热门文章</h5>
 						<div class="inner">
 							<ul class="hot-list-article">
-								@foreach (var ca in ViewBag.calist)
+								@foreach (var ca in ViewBag.toplist)
 								{
 									<li>
-										<a href="/Blog/Artical?Number=@ca.Number">@ca.Name (@blogdal.CalcCount($"Number='{ca.Number}'"))</a>
+										<a href="/Blog/Artical/@ca.ID">@ca.Title (@ca.VisitNum)</a>
 									</li>
 								}
 								
@@ -108,16 +119,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="other-item">
-						<h5 class="other-item-title">置顶推荐</h5>
-						<div class="inner">
-							<ul class="hot-list-article">
-								<li> <a href="/Blog/Read/16">.NET Spire.Doc组件</a></li>
-								<li> <a href="/Blog/Read/14">MUI框架-快速开发APP</a></li>
-								<li> <a href="/Blog/Read/9">2018最新版QQ音乐api调用</a></li>
-							</ul>
-						</div>
-					</div>
+					
 					
 				</div>
 			</div>

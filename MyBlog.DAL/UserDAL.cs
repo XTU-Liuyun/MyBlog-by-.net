@@ -47,7 +47,33 @@ namespace MyBlog.DAL
                 return resid;
             }
         }
-       
+        /// <summary>
+        /// 获取用户数量
+        /// </summary>
+        /// <returns></returns>
+        public int GetUserNum(string time)
+        {
+            if(!string.IsNullOrEmpty(time))
+            {
+                time = $"where {time}";
+            }
+            string sql = $"select count(1) from user {time}";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                int res = connection.ExecuteScalar<int>(sql);
+                return res;
+            }
+        }
+        public bool UpdateLoginTime(int id)
+        {
+
+            string sql = $"update user set LastLogin=(select now()) where id={id}";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                bool res = connection.ExecuteScalar<bool>(sql);
+                return res;
+            }
+        }
         
     }
 }
