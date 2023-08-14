@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Z7XX51151+z3LV1wplADSppjjMTsakM02jU86e2ME7g=",
+  "Hash": "0XVPl64E2vXAmy3/6tnDesiHL2dvG01kjkunHY2a/Ag=",
   "Source": "MyBlog.Web",
   "BasePath": "_content/MyBlog.Web",
   "Mode": "Default",
@@ -3381,6 +3381,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\image\\201842415510280.png"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\ArticalCover\\c language.jpg",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/image/ArticalCover/c language.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\ArticalCover\\c language.jpg"
     },
     {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\bg9.jpg",

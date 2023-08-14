@@ -26,6 +26,6 @@ namespace MyBlog.Model
         /// </summary>
         public bool Accept { get; set; }
 
-        
+        public DateTime Time { get; set; }
     }
 }

@@ -64,6 +64,11 @@ namespace MyBlog.DAL
                 return res;
             }
         }
+        /// <summary>
+        /// 更新登录时间
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public bool UpdateLoginTime(int id)
         {
 

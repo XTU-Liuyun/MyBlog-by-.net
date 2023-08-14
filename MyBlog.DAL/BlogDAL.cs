@@ -225,5 +225,19 @@ namespace MyBlog.DAL
                 return res;
             }
         }
+        /// <summary>
+        /// 获取分类封面
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static string GetCover(int id)
+        {
+            string sql = $"select cover from category where number=(select number from blog where id={id})";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                string res = connection.ExecuteScalar<string>(sql);
+                return res;
+            }
+        }
     }
 }

@@ -111,7 +111,7 @@
 								@foreach (var ca in ViewBag.toplist)
 								{
 									<li>
-										<a href="/Blog/Artical/@ca.ID">@ca.Title (@ca.VisitNum)</a>
+										<a href="/Blog/Show/@ca.ID">@ca.Title (@ca.VisitNum)</a>
 									</li>
 								}
 								
@@ -194,7 +194,7 @@
 				var url = "/blog/list?pageindex=" + pageindex + "&pagesize=" + pagesize;
 				$.post(url, postdata, function (json)
 				{
-					console.log(postdata);
+					console.log("postdata:"+postdata);
 					var html = '';
 					$.each(json,function(i,blog)
 					{
@@ -213,12 +213,12 @@
 						html+='    </div>';
 						html+='    <div class="content">';
 						html += '        <a href="/Blog/Show/'+blog.id +'"class="cover img-light">';
-						html+='           <img src="">';
+						html+='           <img src="/assets/image/ArticalCover/'+blog.cover+'">';
 						html+='          </a>';
 						html+='        '+blog.desc;
 						html+='    </div>';
 						html+='    <div class="read-more">';
-						html+='        <a href="/Blog/Read/16" class="fc-black f-fwb">继续阅读</a>';
+						html+='        <a href="/Blog/Show/+'+blog.id+'" class="fc-black f-fwb">继续阅读</a>';
 						html+='   </div>';
 						html+='    <aside class="f-oh footer">';
 						html+='       <div class="f-fl tags">';

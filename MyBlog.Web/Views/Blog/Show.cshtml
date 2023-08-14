@@ -2,7 +2,8 @@
 @{
 	Layout = null;
 }
-@model MyBlog.Model.Blog
+@model MyBlog.Model.BlogAndComments
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,7 @@
     <header class="gird-header">
         <div class="header-fixed">
             <div class="header-inner">
-                <a href="javascript:void(0)" class="header-logo" id="logo">Mr.Yss</a>
+                <a href="javascript:void(0)" class="header-logo" id="logo">Liuyun</a>
                 <nav class="nav" id="nav">
                     <ul>
                         <li><a href="index.html">首页</a></li>
@@ -52,30 +53,30 @@
                         <input type="hidden" id="blogtypeid" />
                         <section class="article-item">
                             <aside class="title"  style="line-height:1.5;">
-                                <h4>@Model.Title</h4>
+                                <h4>@Model.Blog.Title</h4>
                                 <p class="fc-grey fs-14">
                                     <small>
                                         作者：<a href="javascript:void(0)" target="_blank" class="fc-link">流云</a>
                                     </small>
-                                    <small class="ml10">围观群众：<i class="readcount">@Model.VisitNum</i></small>
-                                    <small class="ml10">更新于 <label>@Model.CreateDate</label> </small>
+                                    <small class="ml10">围观群众：<i class="readcount">@Model.Blog.VisitNum</i></small>
+                                    <small class="ml10">更新于 <label>@Model.Blog.CreateDate</label> </small>
                                 </p>
                             </aside>
                             <div class="time mt10" style="padding-bottom:0;">
                                 
-                                <span class="day">@Model.CreateDate.ToString("yyyy-mm-dd").Substring(8,2)</span>
-                                <span class="month fs-18">@Model.CreateDate.ToString("yyyy-MM-dd").Substring(5,2)<small class="fs-14">月</small></span>
-                                <span class="year fs-18">@Model.CreateDate.ToString("yyyy-mm-dd").Substring(0,4)</span>
+                                <span class="day">@Model.Blog.CreateDate.ToString("yyyy-mm-dd").Substring(8,2)</span>
+                                <span class="month fs-18">@Model.Blog.CreateDate.ToString("yyyy-MM-dd").Substring(5,2)<small class="fs-14">月</small></span>
+                                <span class="year fs-18">@Model.Blog.CreateDate.ToString("yyyy-mm-dd").Substring(0,4)</span>
                             </div>
                             <div class="content artiledetail" style="border-bottom: 1px solid #e1e2e0; padding-bottom: 20px;">
-                                @Html.Raw(Model.Body)
+                                @Html.Raw(Model.Blog.Body)
                                 <div class="copyright mt20">
                                     <p class="f-toe fc-black">
                                         非特殊说明，本文版权归 流云 所有，转载请注明出处.
                                     </p>
                                     <p class="f-toe">
                                         本文标题：
-                                        <a href="javascript:void(0)" class="r-title">@Model.Title</a>
+                                        <a href="javascript:void(0)" class="r-title">@Model.Blog.Title</a>
                                     </p>
                                     <p class="f-toe">
                                         本文网址：
@@ -86,35 +87,50 @@
                                 <h6>延伸阅读</h6>
                                 <ol class="b-relation"></ol>
                             </div>
-                            <div class="bdsharebuttonbox share" data-tag="share_1">
-                                <ul>
-                                    <li class="f-praise"><span><a class="s-praise"></a></span></li>
-                                    <li class="f-weinxi"><a class="s-weinxi" data-cmd="weixin"></a></li>
-                                    <li class="f-sina"><a class="s-sina" data-cmd="tsina"></a></li>
-                                    <li class="f-qq" href="#"><i class="fa fa-qq"></i></li>
-                                    <li class="f-qzone"><a class="s-qzone" data-cmd="qzone"></a></li>
-                                </ul>
-                            </div>
-                            <div class="f-cb"></div>
-                            <div class="mt20 f-fwn fs-24 fc-grey comment" style="border-top: 1px solid #e1e2e0; padding-top: 20px;">
-                            </div>
+                            
                             <fieldset class="layui-elem-field layui-field-title">
                                 <legend>发表评论</legend>
                                 <div class="layui-field-box">
                                     <div class="leavemessage" style="text-align:initial">
-                                        <form class="layui-form blog-editor" action="">
-                                            <input type="hidden" name="articleid" id="articleid" >
-                                            <div class="layui-form-item">
-                                                <textarea name="editorContent" lay-verify="content" id="remarkEditor" placeholder="请输入内容" class="layui-textarea layui-hide"></textarea>
+                                        <form class="layui-form" method="post" action="">
+                                            
+                                            <div style="padding-right:60px;">
+                                                <div class="layui-input-block">
+                                                    @Html.TextAreaFor(a=>a.Comments.Body,new {placeholder="请输入内容",@class="textarea" })
+
+                                                </div>
                                             </div>
+                                            <input type="hidden" value=@Model.Blog.ID name="blogid" id="blogid"/>
+                                            <input type="hidden" value=@base.Context.Session.GetInt32("userid") name="userid" />
                                             <div class="layui-form-item">
-                                                <button class="layui-btn" lay-submit="formLeaveMessage" lay-filter="formLeaveMessage">提交留言</button>
+                                                <button class="layui-btn" type="submit">提交评论</button>
+                                                @Html.AntiForgeryToken()
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                             </fieldset>
-                            <ul class="blog-comment" id="blog-comment"></ul>
+                            
+                            <ul class="blog-comment" id="blog-comment">
+                                <li class="zoomIn article">
+                                    <div class="comment-parent">
+                                        <a name="remark-1"></a>
+                                        
+                                        <div class="info">
+                                            <span class="username">燕十三</span>
+                                        </div>
+                                        <div class="comment-content">
+                                            剑气纵横三万里
+                                        </div>
+                                        <p class="info info-footer">
+                                            
+                                            <span class="comment-time">2018-01-01</span>
+    
+                                        </p>
+                                    </div>
+                                    <hr />
+                                </li>
+                            </ul>
                         </section>
                     </article>
                 </div>
@@ -151,6 +167,112 @@
         window.onload = function () {
             NProgress.done();
         };
+    </script>
+    <script src="~/tinymce/tinymce.min.js"></script>
+    <script src="~/tinymce/langs/zh-hans.js"></script>
+    <script>
+        let uploadTimeOut = null
+        let removeFn = null
+        tinymce.init
+            ({
+
+                selector: 'textarea',
+                promotion: false,
+                language: 'zh-Hans',
+                plugins: "paste, link",
+                toolbar: "paste link",
+                paste_data_images: true
+
+            });
+
+
+    </script>
+    <script>
+        var pagesize = 10;
+        layui.use(function () 
+        {
+            var laypage = layui.laypage, layer = layui.layer, $ = layui.jquery;
+            var postdata = { blogid: $("#blogid").val() };
+            var url = "/blog/GetBlogCommentsCount?t=" + new Date().valueOf();
+
+            $.post(url, postdata, function (count) {
+
+                console.log("总数为" + count);
+                laypage.render
+                    ({
+                        elem: 'demo-laypage-all', // 元素 id
+                        count: count, // 数据总数
+                        layout: ['prev', 'page', 'next', 'refresh', 'skip'], // 功能布局
+                        jump: function (obj) {
+                            var pageindex = obj.curr;
+                            //读取后台
+                            load_blog_data(pageindex);
+                        },
+                        theme: '#c00'
+                    });
+            });
+            // 完整显示
+        });
+        function load_blog_data(pageindex) 
+        {
+            //console.log("加载："+pageindex);
+            layui.use('layer', function () 
+            {
+                var $ = layui.jquery, layer = layui.layer;
+                
+                var url = "/blog/commentslist?pageindex=" + pageindex + "&pagesize=" + pagesize + "&blogid=" + $("#blogid").val();
+                $.post(url, function (json) 
+                {
+                    
+                    var html = '';
+                    $.each(json, function (i, blog) 
+                    {
+
+                        console.log("第" + i + "个元素");
+                        console.log(blog);
+                        /*html += '<section class="article-item zoomIn article">';
+                        //html+='    <div class="fc-flag">置顶</div>'
+                        html += '    <h5 class="title">';
+                        html += '        <span class="fc-blue">【原创】</span>';
+                        html += '        <a href="/Blog/Show/' + blog.id + '">' + blog.title + '</a>';
+                        html += '    </h5>';
+                        html += '    <div class="time">';
+                        html += '        <span class="day">' + blog.createDate.substring(8, 10) + '</span>';
+                        html += '        <span class="month fs-18">' + blog.createDate.substring(5, 7) + '<span class="fs-14">月</span></span>';
+                        html += '        <span class="year fs-18 ml10">' + blog.createDate.substring(0, 4) + '</span>';
+                        html += '    </div>';
+                        html += '    <div class="content">';
+                        html += '        <a href="/Blog/Show/' + blog.id + '"class="cover img-light">';
+                        html += '           <img src="/assets/image/ArticalCover/' + blog.cover + '">';
+                        html += '          </a>';
+                        html += '        ' + blog.desc;
+                        html += '    </div>';
+                        html += '    <div class="read-more">';
+                        html += '        <a href="/Blog/Show/+' + blog.id + '" class="fc-black f-fwb">继续阅读</a>';
+                        html += '   </div>';
+                        html += '    <aside class="f-oh footer">';
+                        html += '       <div class="f-fl tags">';
+                        html += '            <span class="fa fa-tags fs-16"></span>';
+                        html += '            <a class="tag">' + blog.name + '</a>';
+                        html += '        </div>';
+                        html += '        <div class="f-fr">';
+                        html += '            <span class="read">';
+                        html += '                <i class="fa fa-eye fs-16"></i>';
+                        html += '                <i class="num">' + blog.visitNum + '</i>';
+                        html += '            </span>';
+                        html += '            <span class="ml20">';
+                        html += '                <i class="fa fa-comments fs-16"></i>';
+                        html += '                <a href="javascript:void(0)" class="num fc-grey">1</a>';
+                        html += '            </span>';
+                        html += '        </div>';
+                        html += '    </aside>';
+                        html += '</section>';*/
+                    })
+
+                    $('.article-list.bloglist').html(html);
+                }, 'json')
+            })
+        }
     </script>
 </body>
 </html>

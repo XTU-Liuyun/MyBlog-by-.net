@@ -199,7 +199,8 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 			{
 				m = dal.GetModel(id.Value);
 			}
-			return View(m); 
+            Console.WriteLine("运行2\n");
+            return View(m); 
 		}
 		[AutoValidateAntiforgeryToken]
 		[HttpPost]
@@ -218,6 +219,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 			{
 				dal.Update(m);
 			}
+			Console.WriteLine("运行1\n");
 			return Redirect("/admin/Blog/Index");
 		}
 		[HttpPost]

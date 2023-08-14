@@ -789,6 +789,10 @@
       "PackagePath": "staticwebassets\\assets\\image\\201842415510280.png"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\ArticalCover\\c language.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\ArticalCover\\c language.jpg"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\bg9.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\bg9.jpg"
     },
