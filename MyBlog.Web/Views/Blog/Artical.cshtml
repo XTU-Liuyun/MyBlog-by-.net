@@ -36,9 +36,9 @@
 				<nav class="nav" id="nav">
 					<ul>
 						<li><a href="/home/index">首页</a></li>
-						<li><a href="article.html">博客</a></li>
-						<li><a href="message.html">留言</a></li>
-						<li><a href="link.html">友链</a></li>
+						<li><a href="/Blog/Artical/">博客</a></li>
+						<li><a href="/home/message">留言</a></li>
+						<li><a href="/home/link">友链</a></li>
 						<li><a href="/Home/login">退出</a></li>
 					</ul>
 				</nav>
@@ -130,10 +130,7 @@
 			<div class="copyright">
 				<div class="info">
 					<div class="contact">
-						<a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
-						<a href="https://wpa.qq.com/msgrd?v=3&uin=930054439&site=qq&menu=yes" class="qq" target="_blank" title="930054439"><i class="fa fa-qq"></i></a>
-						<a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=gbiysbG0tbWyuMHw8K-i7uw" class="email" target="_blank" title="930054439@qq.com"><i class="fa fa-envelope"></i></a>
-						<a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+						<a href="https://github.com/XTU-Liuyun" class="github" target="_blank"><i class="fa fa-github"></i></a>
 					</div>
 					<p class="mt05">
 						Copyright &copy;2023 流云
@@ -218,7 +215,7 @@
 						html+='        '+blog.desc;
 						html+='    </div>';
 						html+='    <div class="read-more">';
-						html+='        <a href="/Blog/Show/+'+blog.id+'" class="fc-black f-fwb">继续阅读</a>';
+						html+='        <a href="/Blog/Show/'+blog.id+'" class="fc-black f-fwb">继续阅读</a>';
 						html+='   </div>';
 						html+='    <aside class="f-oh footer">';
 						html+='       <div class="f-fl tags">';
@@ -232,7 +229,7 @@
 						html+='            </span>';
 						html+='            <span class="ml20">';
 						html+='                <i class="fa fa-comments fs-16"></i>';
-						html+='                <a href="javascript:void(0)" class="num fc-grey">1</a>';
+						html+='                <i class="num fc-grey">'+blog.commentsnum+'</i>';
 						html+='            </span>';
 						html+='        </div>';
 						html+='    </aside>';

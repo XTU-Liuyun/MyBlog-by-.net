@@ -37,12 +37,13 @@ namespace MyBlog.Web.Controllers
 		/// <returns></returns>
 		public IActionResult CommentsList(int pageindex, int pagesize,int blogid)
 		{
-
-			List<Model.Comments> list = commentsdal.GetList("time asc", pagesize, pageindex,$"BlogID={blogid}");
+			DAL.UserDAL user = new DAL.UserDAL();	
+			List<Model.Comments> list = commentsdal.GetList("time asc", pagesize, pageindex,$"BlogID={blogid} and Accept={1}");
 			ArrayList arr = new ArrayList();
 			foreach (var item in list)
 			{
-				arr.Add(new { id = item.ID, blogid = item.BlogID, userid = item.UserID,body = Tool.GZipDecompressString(item.Body),time=item.Time});
+				arr.Add(new { id = item.ID, blogid = item.BlogID, username = user.GetName(item.UserID),body = Tool.GZipDecompressString(item.Body),time=item.Time.ToString("yyyy-MM-dd hh:mm")});
+				Console.WriteLine(item.ID + " " + item.BlogID + " " + user.GetName(item.UserID) + " " + Tool.GZipDecompressString(item.Body) + "\n");
 			}
 
 			return Json(arr);
@@ -58,11 +59,13 @@ namespace MyBlog.Web.Controllers
         public IActionResult List(int pageindex, int pagesize, string key, string number)
         {
             List<Model.Blog> list = dal.GetList("sort asc,id desc", pagesize, pageindex, GetCond(key, number));
+			
             ArrayList arr = new ArrayList();
             foreach (var item in list)
             {
+				int commentsnum = commentsdal.CalcCount($"blogid={item.ID} and accept={1}");
                 //Console.WriteLine("item:"+item.Body);
-                arr.Add(new { id = item.ID, title = item.Title, createDate = item.CreateDate.ToString("yyyy-MM-dd"), visitNum = item.VisitNum, name = item.Name, desc = Tool.StringTruncat(Tool.GetNoHTMLString(item.Body), 60, "..."), cover = BlogDAL.GetCover(item.ID) });
+                arr.Add(new { id = item.ID, title = item.Title, createDate = item.CreateDate.ToString("yyyy-MM-dd"), visitNum = item.VisitNum, name = item.Name, desc = Tool.StringTruncat(Tool.GetNoHTMLString(Tool.GZipDecompressString(item.Body)), 60, "..."), cover = BlogDAL.GetCover(item.ID),commentsnum=commentsnum});
             }
 
             return Json(arr);
@@ -70,18 +73,20 @@ namespace MyBlog.Web.Controllers
         /// <summary>
         /// 阅读
         /// </summary>
-        /// <returns></returns>
+        /// <returns></returns> 
         public IActionResult Show(int id)
 		{
-			Console.WriteLine($"Show {id}");
-			Model.Blog b=dal.GetModel(id);
-			Model.BlogAndComments a=new Model.BlogAndComments() { Blog=b,Comments=new Model.Comments() };
+            Model.Blog b = dal.GetModel(id);
+            Model.BlogAndComments a = new Model.BlogAndComments() { Blog = b, Comments = new Model.Comments() };
+            if (a.Blog == null)
+            {
+                return Content("Error");
+            }
+            Console.WriteLine($"\nShow {id}");
 			
-			if (a.Blog == null)
-			{
-				return Content("Error");
-			}
             Console.WriteLine('\n' + "标题为:" + a.Blog.Title);
+           
+            
             dal.AddVisted(id);
 			return View(a);
 		}
@@ -117,8 +122,8 @@ namespace MyBlog.Web.Controllers
 		/// <returns></returns>
         public IActionResult GetBlogCommentsCount(int id)
         {
-
-            int totalCount = commentsdal.CalcCount($"blogid={id}");
+			
+            int totalCount = commentsdal.CalcCount($"blogid={id} and Accept={1}");
             Console.WriteLine("BlogCommentstotalCount=:" + totalCount);
             return Content(totalCount.ToString());
         }

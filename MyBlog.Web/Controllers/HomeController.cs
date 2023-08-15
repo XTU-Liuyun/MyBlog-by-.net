@@ -9,7 +9,7 @@ namespace MyBlog.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        DAL.BlogDAL blogdal=new DAL.BlogDAL();
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -17,12 +17,34 @@ namespace MyBlog.Web.Controllers
 
         public IActionResult Index()
         {
+
+            ViewBag.top3list = blogdal.GetTop3List();
             return View();
         }
         
-        public IActionResult Private()
+        public IActionResult Link()
         {
             return View();
+        }
+        public IActionResult Message()
+        {
+            Model.Comments m=new Model.Comments();  
+            return View(m);
+        }
+        [AutoValidateAntiforgeryToken]
+        [HttpPost]
+        public IActionResult Message(Model.Comments m)
+        {
+            string str = m.Body;
+            Console.WriteLine("\n"+str+"\n");
+            m.Body=Tool.GZipCompressString(str);  
+            if (m.Body.Length == 0)
+            {
+                return Content($"<script>alert('评论不能为空!');location.href='/home/message'</script>", "text/html", Encoding.UTF8);
+            }
+            MyBlog.DAL.CommentsDAL commentsdal = new CommentsDAL();
+            commentsdal.Insert(m);
+            return Content($"<script>alert('已发表评论,请等待管理员审核!');location.href='/home/message'</script>", "text/html", Encoding.UTF8);
         }
         public IActionResult Login()
         {

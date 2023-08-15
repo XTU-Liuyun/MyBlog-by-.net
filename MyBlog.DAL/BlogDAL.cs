@@ -1,7 +1,9 @@
 ﻿using Dapper;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using MyBlog.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -21,6 +23,7 @@ namespace MyBlog.DAL
         /// <param name="element"> 所需增加的内容 </param>
         public int Insert(Model.Blog element)
         {
+            
             using (var connection = ConnectFactory.GetOpenConnection())
             {
 
@@ -84,7 +87,16 @@ namespace MyBlog.DAL
         /// <returns></returns>
         public List<Model.Blog> GetTop10List()
         {
-            string sql = "SELECT * from (SELECT id,Title,VisitNum,DENSE_RANK()over(ORDER BY VisitNum DESC) rank1 from blog) t1 WHERE t1.rank1<=10";
+            string sql = "SELECT * from (SELECT id,Title,VisitNum,DENSE_RANK()over(ORDER BY VisitNum DESC) rank1 from blog) t1 WHERE t1.rank1<=10 limit 10";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                var list = connection.Query<Model.Blog>(sql).ToList();
+                return list;
+            }
+        }
+        public List<Model.Blog> GetTop3List()
+        {
+            string sql = "SELECT * from (SELECT id,Title,CreateDate,Body,VisitNum,DENSE_RANK()over(ORDER BY VisitNum DESC) rank1 from blog) t1 WHERE t1.rank1<=10 limit 3";
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 var list = connection.Query<Model.Blog>(sql).ToList();
@@ -205,6 +217,7 @@ namespace MyBlog.DAL
                 time = " where " + time;
             }
             string sql = $"select sum(VisitNum) from blog {time}";
+           
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 int res = connection.ExecuteScalar<int>(sql);
@@ -238,6 +251,17 @@ namespace MyBlog.DAL
                 string res = connection.ExecuteScalar<string>(sql);
                 return res;
             }
+        }
+        
+        public string GetMaxVisitNum()
+        {
+            string sql = "select Title from blog where VisitNum = (select max(VisitNum) from blog)";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                string res = connection.ExecuteScalar<string>(sql);
+                return res;
+            }
+
         }
     }
 }

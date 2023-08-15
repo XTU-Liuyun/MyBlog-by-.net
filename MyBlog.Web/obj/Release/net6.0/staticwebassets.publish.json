@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZFdwYM/egkbqCRHtP9/b0cD67cajry15ItifWQkSL4U=",
+  "Hash": "koWqISGOYVsyf+pFwLOZmnrezlC7r5cXAbbS2ZWe6wI=",
   "Source": "MyBlog.Web",
   "BasePath": "_content/MyBlog.Web",
   "Mode": "Default",
@@ -2465,6 +2465,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\index_style.css"
     },
     {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\login style.css",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/css/login style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\login style.css"
+    },
+    {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\master.css",
       "SourceId": "MyBlog.Web",
       "SourceType": "Discovered",
@@ -2514,6 +2531,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\nprogress.css"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\style.css",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
     },
     {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\timeline.css",
@@ -3332,6 +3366,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\image\\1.jpg"
     },
     {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\1.png",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/image/1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\1.png"
+    },
+    {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2.jpg",
       "SourceId": "MyBlog.Web",
       "SourceType": "Discovered",
@@ -3347,6 +3398,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\image\\2.jpg"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2.png",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/image/2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\2.png"
     },
     {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2018415193031394.jpg",
@@ -3381,6 +3449,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\image\\201842415510280.png"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\3.png",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/image/3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\3.png"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\ArticalCover\\c language.jpg",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/image/ArticalCover/c language.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\ArticalCover\\c language.jpg"
     },
     {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\bg9.jpg",
@@ -3466,6 +3568,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\image\\page\\weixin.png"
+    },
+    {
+      "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\user.jpg",
+      "SourceId": "MyBlog.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\",
+      "BasePath": "_content/MyBlog.Web",
+      "RelativePath": "assets/image/user.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\user.jpg"
     },
     {
       "Identity": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\index.js",

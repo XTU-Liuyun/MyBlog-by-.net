@@ -77,8 +77,9 @@
 	layui.use(function () 
 	{
 		var laypage = layui.laypage,layer=layui.layer,$=layui.jquery;
+		
 		var url="/admin/blog/GetTotalCount?t="+new Date().valueOf();
-		$.post(url, function (count) 
+		$.post(url,function (count) 
 		{
 			console.log("页数为" + count);
 			laypage.render
@@ -147,7 +148,7 @@
 		{
 			var laypage = layui.laypage, layer = layui.layer, $ = layui.jquery;
 			var postdata = getcond();
-			var url = "/blog/GetTotalCount?t=" + new Date().valueOf();
+			var url = "/admin/blog/GetTotalCount?t=" + new Date().valueOf();
 			$.post(url, postdata,function (count) 
 			{
 

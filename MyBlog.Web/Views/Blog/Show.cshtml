@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/assets/css/gloable.css" />
     <link rel="stylesheet" href="/assets/css/nprogress.css" />
     <link rel="stylesheet" href="/assets/css/blog.css" />
+    <link rel="stylesheet" href="/assets/css/message.css" />
 </head>
 <body>
     <div class="header">
@@ -28,15 +29,13 @@
                 <a href="javascript:void(0)" class="header-logo" id="logo">Liuyun</a>
                 <nav class="nav" id="nav">
                     <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="article.html">博客</a></li>
-                        <li><a href="message.html">留言</a></li>
-                        <li><a href="link.html">友链</a></li>
+                        <li><a href="/home">首页</a></li>
+                        <li><a href="/Blog/Artical">博客</a></li>
+                        <li><a href="/home/message">留言</a></li>
+                        <li><a href="/home/link">友链</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="blog-user">
-                    <i class="fa fa-qq"></i>
-                </a>
+               
                 <a class="phone-menu">
                     <i></i>
                     <i></i>
@@ -69,7 +68,7 @@
                                 <span class="year fs-18">@Model.Blog.CreateDate.ToString("yyyy-mm-dd").Substring(0,4)</span>
                             </div>
                             <div class="content artiledetail" style="border-bottom: 1px solid #e1e2e0; padding-bottom: 20px;">
-                                @Html.Raw(Model.Blog.Body)
+                                @Html.Raw(Tool.GZipDecompressString(Model.Blog.Body))
                                 <div class="copyright mt20">
                                     <p class="f-toe fc-black">
                                         非特殊说明，本文版权归 流云 所有，转载请注明出处.
@@ -109,30 +108,25 @@
                                         </form>
                                     </div>
                                 </div>
+                                
+                                <article class="article-list bloglist" id="LAY_bloglist">
+                                    <div class="f-cb"></div>
+                                    <div class="mt20">
+                                        <ul class="message-list" id="message-list">
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <div style="padding-top: 10px;">
+                                    <div class="layui-panel" id="demo-laypage-all"></div>
+                                </div>
                             </fieldset>
                             
-                            <ul class="blog-comment" id="blog-comment">
-                                <li class="zoomIn article">
-                                    <div class="comment-parent">
-                                        <a name="remark-1"></a>
-                                        
-                                        <div class="info">
-                                            <span class="username">燕十三</span>
-                                        </div>
-                                        <div class="comment-content">
-                                            剑气纵横三万里
-                                        </div>
-                                        <p class="info info-footer">
-                                            
-                                            <span class="comment-time">2018-01-01</span>
-    
-                                        </p>
-                                    </div>
-                                    <hr />
-                                </li>
-                            </ul>
+                            
+                            
                         </section>
                     </article>
+                    
                 </div>
             </div>
         </div>
@@ -142,10 +136,7 @@
             <div class="copyright">
                 <div class="info">
                     <div class="contact">
-                        <a href="javascript:void(0)" class="github" target="_blank"><i class="fa fa-github"></i></a>
-                        <a href="#" class="qq" target="_blank"><i class="fa fa-qq"></i></a>
-                        <a href="#" class="email" target="_blank"><i class="fa fa-envelope"></i></a>
-                        <a href="javascript:void(0)" class="weixin"><i class="fa fa-weixin"></i></a>
+                        <a href="https://github.com/XTU-Liuyun" class="github" target="_blank"><i class="fa fa-github"></i></a>
                     </div>
                     <p class="mt05">
                         Copyright &copy;2023 流云
@@ -184,25 +175,24 @@
                 paste_data_images: true
 
             });
-
-
     </script>
     <script>
         var pagesize = 10;
         layui.use(function () 
         {
             var laypage = layui.laypage, layer = layui.layer, $ = layui.jquery;
-            var postdata = { blogid: $("#blogid").val() };
-            var url = "/blog/GetBlogCommentsCount?t=" + new Date().valueOf();
+            var postdata = {id: $("#blogid").val() };
+            var url = "/blog/GetBlogCommentsCount?&t = " + new Date().valueOf();
 
-            $.post(url, postdata, function (count) {
+            $.post(url, postdata, function (count) 
+            {
 
                 console.log("总数为" + count);
                 laypage.render
                     ({
                         elem: 'demo-laypage-all', // 元素 id
                         count: count, // 数据总数
-                        layout: ['prev', 'page', 'next', 'refresh', 'skip'], // 功能布局
+                        layout: ['prev', 'page', 'next', 'refresh', 'skip', 'count'], // 功能布局
                         jump: function (obj) {
                             var pageindex = obj.curr;
                             //读取后台
@@ -215,7 +205,7 @@
         });
         function load_blog_data(pageindex) 
         {
-            //console.log("加载："+pageindex);
+            console.log("加载："+pageindex);
             layui.use('layer', function () 
             {
                 var $ = layui.jquery, layer = layui.layer;
@@ -226,50 +216,29 @@
                     
                     var html = '';
                     $.each(json, function (i, blog) 
-                    {
+                    { 
 
                         console.log("第" + i + "个元素");
                         console.log(blog);
-                        /*html += '<section class="article-item zoomIn article">';
-                        //html+='    <div class="fc-flag">置顶</div>'
-                        html += '    <h5 class="title">';
-                        html += '        <span class="fc-blue">【原创】</span>';
-                        html += '        <a href="/Blog/Show/' + blog.id + '">' + blog.title + '</a>';
-                        html += '    </h5>';
-                        html += '    <div class="time">';
-                        html += '        <span class="day">' + blog.createDate.substring(8, 10) + '</span>';
-                        html += '        <span class="month fs-18">' + blog.createDate.substring(5, 7) + '<span class="fs-14">月</span></span>';
-                        html += '        <span class="year fs-18 ml10">' + blog.createDate.substring(0, 4) + '</span>';
-                        html += '    </div>';
-                        html += '    <div class="content">';
-                        html += '        <a href="/Blog/Show/' + blog.id + '"class="cover img-light">';
-                        html += '           <img src="/assets/image/ArticalCover/' + blog.cover + '">';
-                        html += '          </a>';
-                        html += '        ' + blog.desc;
-                        html += '    </div>';
-                        html += '    <div class="read-more">';
-                        html += '        <a href="/Blog/Show/+' + blog.id + '" class="fc-black f-fwb">继续阅读</a>';
+                        html += '<li class="zoomIn article">';
+                        html += '   <div class="comment-parent">';
+                        html += '       <a name="remark-1"></a>';
+                        html += '       <img src="/assets/image/user.jpg"/>'
+                        html += '       <div class="info">';
+                        html += '           <span class="username" style="font-size:18px;">'+blog.username+'</span>';
+                        html += '       </div>';
+                        html += '       <div class="comment-content">';
+                        html += '           '+blog.body;
+                        html += '       </div>';
+                        html += '       <p class="info info-footer">';
+                        html += '           <span class="comment-time">' + blog.time+ '</span>';
+                        html += '       <p>';
                         html += '   </div>';
-                        html += '    <aside class="f-oh footer">';
-                        html += '       <div class="f-fl tags">';
-                        html += '            <span class="fa fa-tags fs-16"></span>';
-                        html += '            <a class="tag">' + blog.name + '</a>';
-                        html += '        </div>';
-                        html += '        <div class="f-fr">';
-                        html += '            <span class="read">';
-                        html += '                <i class="fa fa-eye fs-16"></i>';
-                        html += '                <i class="num">' + blog.visitNum + '</i>';
-                        html += '            </span>';
-                        html += '            <span class="ml20">';
-                        html += '                <i class="fa fa-comments fs-16"></i>';
-                        html += '                <a href="javascript:void(0)" class="num fc-grey">1</a>';
-                        html += '            </span>';
-                        html += '        </div>';
-                        html += '    </aside>';
-                        html += '</section>';*/
+                        html += '   <hr />';
+                        html += '</li>';
                     })
 
-                    $('.article-list.bloglist').html(html);
+                    $('.message-list').html(html);
                 }, 'json')
             })
         }

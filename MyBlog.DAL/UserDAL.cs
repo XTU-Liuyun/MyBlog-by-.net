@@ -79,6 +79,92 @@ namespace MyBlog.DAL
                 return res;
             }
         }
-        
-    }
+        public string GetName(int id)
+        {
+            if(id==0)
+            {
+                return "游客";
+            }
+            string sql = $"select name from user where id={id}";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                string res = connection.ExecuteScalar<string>(sql);
+                return res;
+            }
+        }
+        /// <summary>
+        /// 获取user数
+        /// </summary>
+        /// <param name="cond"></param>
+        /// <returns></returns>
+		public int CalcCount(string cond)
+		{
+			Console.WriteLine("1该cond为:" + cond);
+			string sql = "select count(1) from user ";
+			if (!string.IsNullOrEmpty(cond))
+			{
+				sql += $"where {cond}";
+			}
+			Console.WriteLine("该sql为" + sql);
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				int res = connection.ExecuteScalar<int>(sql);
+				return res;
+			}
+		}
+		/// <summary>
+		/// 查询
+		/// </summary>
+		/// <param name="cond"></param>
+		/// <returns></returns>
+		public List<Model.User> GetList(string cond)
+		{
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				string sql = "select * from user";
+				if (!string.IsNullOrEmpty(cond))
+				{
+					sql += $" where {cond}";
+				}
+				var list = connection.Query<Model.User>(sql).ToList();
+				return list;
+			}
+		}
+		public List<Model.User> GetList(string orderstr, int PageSize, int PageIndex, string strWhere)
+		{
+			if (!string.IsNullOrEmpty(strWhere))
+			{
+				strWhere = " where " + strWhere;
+			}
+			string sql = //mssql:/*string.Format
+				/*(
+					"select * from [user] {0} order by {1} offset {2} rows fetch next {3} rows only",
+					strWhere,
+					orderstr,
+					(PageIndex - 1) * PageSize,
+					PageSize
+				);*/
+				$"select * from user {strWhere} order by {orderstr} limit {(PageIndex - 1) * PageSize},{PageSize}";
+			List<Model.User> list = new List<Model.User>();
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				Console.Write(sql);
+				list = connection.Query<Model.User>(sql).ToList();
+			}
+			return list;
+		}
+		/// <summary>
+		/// 删除
+		/// </summary>
+		/// <param name="id">所删除的id</param>
+		/// <returns></returns>
+		public int Delete(int id)
+		{
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+				int res = connection.Execute(@"delete from user where id = @id", new { id = id });
+				return res;
+			}
+		}
+	}
 }

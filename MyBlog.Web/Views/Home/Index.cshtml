@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+    MyBlog.DAL.BlogDAL blogdal = new MyBlog.DAL.BlogDAL();
 }
 <!DOCTYPE html>
 <html lang="zh-Hans-CN">
@@ -12,7 +13,9 @@
     <link href="/layui-v2.8.11/layui/css/layui.css" rel="stylesheet" type="text/css">
     <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/index_style.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/animate.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/animate.min.css" rel="stylesheet" type="text/css">
+	
+	
 </head>
 <body>
     <div id="menu" class="hover_animation menu_open" data-mark="false">
@@ -22,10 +25,9 @@
     </div>
     <div id="navgation" class="navgation navgation_close">
         <ul class="point">
-            <li><a href="#">首页</a></li>
+            <li><a href="/home">首页</a></li>
             <li><a href="/Blog/Artical/">博客</a></li>
-            <li><a href="message.html">留言</a></li>
-            
+            <li><a href="/home/link">友链</a></li>
         </ul>
         <div class="logo"><a>Liuyun</a></div>
     </div>
@@ -55,78 +57,35 @@
                         </div>
                     </div>
                     <div class="layui-row">
-                        <div class="layui-col-xs12 layui-col-sm4 layui-col-md4  wow fadeInUp" style="padding: 0 10px">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="image/1.jpg">
-                                    <a href="#" class="link"><i class="fa fa-link"></i></a>
-                                </div>
-                                <div class="news-content">
-                                    <h4>
-                                        <a href="#">
-                                            标题
-                                        </a>
-                                    </h4>
-                                    <div class="date">
-                                        2017年2月16日
+                        @foreach(var item in ViewBag.top3list)
+                        {
+                            Console.WriteLine("\n"+item.CreateDate+"\n");
+                            <div class="layui-col-xs12 layui-col-sm4 layui-col-md4  wow fadeInUp" style="padding: 0 10px">
+                                <div class="single-news">
+                                    <div class="news-head">
+                                        <img src="/assets/image/ArticalCover/@MyBlog.DAL.BlogDAL.GetCover(item.ID)">
+                                        <a href="blog/show/@item.ID" class="link"><i class="fa fa-link"></i></a>
                                     </div>
-                                    <p>
-                                        很想给你写封信,告诉你这里的天气. 昨夜的那场电影,还有我的心情.
-                                    </p>
-                                    <a href="#" class="btn">
-                                        阅读更多 
-                                    </a>
+                                    <div class="news-content">
+                                        <h4>
+                                            <a href="blog/show/@item.ID">
+                                                @item.Title
+                                            </a>
+                                        </h4>
+                                        <div class="date">
+                                            @item.CreateDate
+                                        </div>
+                                        <p>
+                                            @Tool.StringTruncat(Tool.GetNoHTMLString(Tool.GZipDecompressString(item.Body)), 60, "...")
+                                        </p>
+                                        <a href="blog/show/@item.ID" class="btn">
+                                            阅读更多
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="layui-col-xs12 layui-col-sm4 layui-col-md4  wow fadeInUp" data-wow-delay=".2s" style="padding: 0 10px">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="image/1.jpg">
-                                    <a href="#" class="link"><i class="fa fa-link"></i></a>
-                                </div>
-                                <div class="news-content">
-                                    <h4>
-                                        <a href="#">
-                                            标题
-                                        </a>
-                                    </h4>
-                                    <div class="date">
-                                        2017年2月16日
-                                    </div>
-                                    <p>
-                                        很想给你写封信,告诉你这里的天气. 昨夜的那场电影,还有我的心情.
-                                    </p>
-                                    <a href="#" class="btn">
-                                        阅读更多 
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="layui-col-xs12 layui-col-sm4 layui-col-md4  wow fadeInUp" data-wow-delay=".4s" style="padding: 0 10px">
-                            <div class="single-news">
-                                <div class="news-head">
-                                    <img src="image/1.jpg">
-                                    <a href="#" class="link"><i class="fa fa-link"></i></a>
-                                </div>
-                                <div class="news-content">
-                                    <h4>
-                                        <a href="#">
-                                            标题
-                                        </a>
-                                    </h4>
-                                    <div class="date">
-                                        2017年2月16日
-                                    </div>
-                                    <p>
-                                        很想给你写封信,告诉你这里的天气. 昨夜的那场电影,还有我的心情.
-                                    </p>
-                                    <a href="#" class="btn">
-                                        阅读更多 
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        }
+                       
                     </div>
                 </div>
             </div>
@@ -141,7 +100,7 @@
                             <div class="links">
                                 <ul>
                                     <li class="wow fadeInLeft"><a href="#">关于</a></li>
-                                    <li class="wow fadeInRight"><a href="#">+友情链接</a></li>
+                                    <li class="wow fadeInRight"><a href="/home/link">+友情链接</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -185,11 +144,9 @@
                         <div class="single-widget">
                             <h2>相关链接</h2>
                             <ul class="social-icon">
-                                <li class="active"><a href="#"><i class="fa fa-book"></i>博文</a></li>
-                                <li class="active"><a href="#"><i class="fa fa-comments"></i>留言</a></li>
-                                <li class="active"><a href="#"><i class="fa fa-share"></i>资源</a></li>
-                                <li class="active"><a href="#"><i class="fa fa-snowflake-o"></i>日记</a></li>
-                                <li class="active"><a href="#"><i class="fa fa-files-o"></i>归档</a></li>
+                                <li class="active"><a href="/blog/artical"><i class="fa fa-book"></i>博文</a></li>
+                                <li class="active"><a href="/blog/artical"><i class="fa fa-comments"></i>留言</a></li>
+                                <li class="active"><a href=" https://github.com/XTU-Liuyun"><i class="fa fa-share"></i>资源</a></li>
                             </ul>                   
                         </div>
                     </div>

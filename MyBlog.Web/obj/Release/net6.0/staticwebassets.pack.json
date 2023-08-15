@@ -573,6 +573,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\index_style.css"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\login style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\login style.css"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\master.css",
       "PackagePath": "staticwebassets\\assets\\css\\master.css"
     },
@@ -583,6 +587,10 @@
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\nprogress.css",
       "PackagePath": "staticwebassets\\assets\\css\\nprogress.css"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\css\\timeline.css",
@@ -777,8 +785,16 @@
       "PackagePath": "staticwebassets\\assets\\image\\1.jpg"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\1.png",
+      "PackagePath": "staticwebassets\\assets\\image\\1.png"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\2.jpg"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2.png",
+      "PackagePath": "staticwebassets\\assets\\image\\2.png"
     },
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\2018415193031394.jpg",
@@ -787,6 +803,14 @@
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\201842415510280.png",
       "PackagePath": "staticwebassets\\assets\\image\\201842415510280.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\3.png",
+      "PackagePath": "staticwebassets\\assets\\image\\3.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\ArticalCover\\c language.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\ArticalCover\\c language.jpg"
     },
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\bg9.jpg",
@@ -807,6 +831,10 @@
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\page\\weixin.png",
       "PackagePath": "staticwebassets\\assets\\image\\page\\weixin.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\user.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\user.jpg"
     },
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\js\\index.js",

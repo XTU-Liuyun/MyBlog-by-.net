@@ -221,6 +221,14 @@ namespace MyBlog.Web
             return outBuffer.ToArray();
 
         }
+        public static string AcceptToString(bool accept)
+        {
+            if(accept==false)
+            {
+                return "未审核";
+            }
+            return "已通过";
+        }
     }
 	
 

@@ -207,6 +207,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 		public IActionResult Add(Model.Blog m)
 		{
 			Model.Category ca = cadal.GetModelNumber(m.Number);
+			m.Body = Tool.GZipCompressString(m.Body);
 			if(ca!=null)
 			{
 				m.Name= ca.Name;

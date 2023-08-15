@@ -13,7 +13,10 @@
 .message-list .info{overflow-x:hidden}
 .message-list .info span{padding-right:5px}
 .message-list .info img{margin-top:-2px}
-.message-list .info .username{color:#01AAED}
+    .message-list .info .username {
+        color:#01AAED;
+        font-size:20px
+    }
 .message-list .info .btn-reply{color:#009688}
 .message-list .comment-content{padding:2px 0 5px 0;min-height:30px;font-size:13px;word-break: break-all}
 .message-list hr{margin-left:53px}

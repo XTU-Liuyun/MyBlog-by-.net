@@ -83,7 +83,7 @@ namespace MyBlog.DAL
             string sql = "select count(1) from comments";
             if (!string.IsNullOrEmpty(cond))
             {
-                sql += $" where {cond}";
+                sql += $" where {cond}"; 
             }
             Console.WriteLine("\n该评论计算sql为" + sql);
             using (var connection = ConnectFactory.GetOpenConnection())
@@ -92,5 +92,15 @@ namespace MyBlog.DAL
                 return res;
             }
         }
+
+        public int Delete(int id)
+        {
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                int res = connection.Execute(@"delete from comments where id = @id", new { id = id });
+                return res;
+            }
+        }
+
     }
 }
