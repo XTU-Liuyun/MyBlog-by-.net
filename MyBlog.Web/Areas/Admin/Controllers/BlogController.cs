@@ -2,11 +2,16 @@
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeMetrics;
+using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.Net.Http.Headers;
 using MyBlog.DAL;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 
 namespace MyBlog.Web.Areas.Admin.Controllers
 {
@@ -16,8 +21,8 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 	/// </summary>
 	public class BlogController : Controller
 	{
-		
-		DAL.BlogDAL dal = new DAL.BlogDAL();
+        
+        DAL.BlogDAL dal = new DAL.BlogDAL();
 		DAL.CategoryDAL cadal = new DAL.CategoryDAL();	
 		public IActionResult Index()
 		{
@@ -105,6 +110,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 				return Json(new { status = "n", info = "分类ID传入错误!" });
 			}
 			string number = ca.Number;
+			string bnumber = ca.Number;
 			string pnumber=ca.PNumber;
 			int source_pid = ca.PNumber == "0" ? 0 : cadal.GetModelNumber(ca.PNumber).ID;
 			Model.Category pca=cadal.GetModel(pid);
@@ -125,6 +131,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 			ca.Name = caname;
 			ca.PNumber = pnumber;
 			ca.Number = number;
+			dal.UpdateNumber(bnumber, number,caname);
 			int b = cadal.Update(ca);
 			if(b>0)
 			{
@@ -198,6 +205,10 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 			if(id!=null)
 			{
 				m = dal.GetModel(id.Value);
+                m.Body = m.Body.Replace("<img src=\"../../", "<img src=\"/");  // 注意需要对双引号进行转义
+
+
+                Console.WriteLine("body="+m.VisitNum+"\n");
 			}
             Console.WriteLine("运行2\n");
             return View(m); 
@@ -207,7 +218,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 		public IActionResult Add(Model.Blog m)
 		{
 			Model.Category ca = cadal.GetModelNumber(m.Number);
-			m.Body = Tool.GZipCompressString(m.Body);
+			m.Body = m.Body;
 			if(ca!=null)
 			{
 				m.Name= ca.Name;
@@ -237,5 +248,23 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 				return Content("删除失败.");
 			}
 		}
-	}
+		public IActionResult Decompression(int id)
+		{
+			Model.Blog blog=dal.GetModel(id);
+			string str=Tool.GZipDecompressString(blog.Body);
+			int b = dal.Decompression(id,str);
+			if (b > 0)
+			{
+				return Content("反解压成功！");
+
+			}
+			else
+			{
+				return Content("反解压失败.");
+			}
+		}
+		
+       
+
+    }
 }

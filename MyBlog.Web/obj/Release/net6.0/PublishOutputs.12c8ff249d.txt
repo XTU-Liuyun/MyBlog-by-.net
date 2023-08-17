@@ -58,6 +58,7 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.ProjectModel.
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Protocol.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\NuGet.Versioning.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\RestSharp.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Composition.Convention.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Composition.Hosting.dll
@@ -69,6 +70,8 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Drawing.Comm
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Reflection.MetadataLoadContext.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Security.Permissions.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Text.Encodings.Web.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Text.Json.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\System.Windows.Extensions.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\af\Humanizer.resources.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\ar\Humanizer.resources.dll
@@ -218,6 +221,7 @@ D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\ne
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\MyBlog.DAL.dll
 D:\Knowledge\MyBlog\MyBlog.Web\obj\Release\net6.0\PubTmp\Out\MyBlog.Model.dll

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting.Internal;
+using Microsoft.Net.Http.Headers;
 using MyBlog.DAL;
 using System.Collections;
 using System.Diagnostics;
@@ -9,11 +11,16 @@ namespace MyBlog.Web.Controllers
 {
 	public class BlogController : Controller
 	{
-		/// <summary>
-		/// 前台博客控制器
-		/// </summary>
-		/// <returns></returns>
-		DAL.BlogDAL dal = new DAL.BlogDAL();
+        Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment;
+        public BlogController(Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
+        {
+            this.hostingEnvironment = hostingEnvironment;
+        }
+        /// <summary>
+        /// 前台博客控制器
+        /// </summary>
+        /// <returns></returns>
+        DAL.BlogDAL dal = new DAL.BlogDAL();
 		DAL.CommentsDAL commentsdal = new DAL.CommentsDAL();	
 		public IActionResult Artical(string key,string number)
 		{
@@ -42,8 +49,8 @@ namespace MyBlog.Web.Controllers
 			ArrayList arr = new ArrayList();
 			foreach (var item in list)
 			{
-				arr.Add(new { id = item.ID, blogid = item.BlogID, username = user.GetName(item.UserID),body = Tool.GZipDecompressString(item.Body),time=item.Time.ToString("yyyy-MM-dd hh:mm")});
-				Console.WriteLine(item.ID + " " + item.BlogID + " " + user.GetName(item.UserID) + " " + Tool.GZipDecompressString(item.Body) + "\n");
+				arr.Add(new { id = item.ID, blogid = item.BlogID, username = user.GetName(item.UserID),body =(item.Body),time=item.Time.ToString("yyyy-MM-dd hh:mm")});
+				Console.WriteLine(item.ID + " " + item.BlogID + " " + user.GetName(item.UserID) + " " + (item.Body) + "\n");
 			}
 
 			return Json(arr);
@@ -65,7 +72,7 @@ namespace MyBlog.Web.Controllers
             {
 				int commentsnum = commentsdal.CalcCount($"blogid={item.ID} and accept={1}");
                 //Console.WriteLine("item:"+item.Body);
-                arr.Add(new { id = item.ID, title = item.Title, createDate = item.CreateDate.ToString("yyyy-MM-dd"), visitNum = item.VisitNum, name = item.Name, desc = Tool.StringTruncat(Tool.GetNoHTMLString(Tool.GZipDecompressString(item.Body)), 60, "..."), cover = BlogDAL.GetCover(item.ID),commentsnum=commentsnum});
+                arr.Add(new { id = item.ID, title = item.Title, createDate = item.CreateDate.ToString("yyyy-MM-dd"), visitNum = item.VisitNum, name = item.Name, desc = Tool.StringTruncat(Tool.GetNoHTMLString((item.Body)), 60, "..."), cover = BlogDAL.GetCover(item.ID),commentsnum=commentsnum});
             }
 
             return Json(arr);
@@ -95,7 +102,7 @@ namespace MyBlog.Web.Controllers
 		public IActionResult Show(Model.Comments m) 
 		{
             var commentBody = Request.Form["Comments.Body"];
-			m.Body = Tool.GZipCompressString(commentBody);
+			m.Body = commentBody;
 			if(m.Body.Length==0)
 			{
 				return Content($"<script>alert('评论不能为空!');location.href='/blog/show/{m.BlogID}'</script>", "text/html", Encoding.UTF8);
@@ -152,5 +159,36 @@ namespace MyBlog.Web.Controllers
 			Console.WriteLine("该cond为:" + cond);
 			return cond;
 		}
-	}
+        [HttpPost]
+        public IActionResult Upload()
+        {
+
+            var imgFile = Request.Form.Files[0];
+            long size = 0;
+            string tempname = "";
+            var filename = ContentDispositionHeaderValue
+                            .Parse(imgFile.ContentDisposition)
+                            .FileName;
+            filename = filename.ToString().Trim('"');
+            var extname = filename.Substring(filename.LastIndexOf('.'), filename.Length - filename.LastIndexOf('.'));
+            var filename1 = System.Guid.NewGuid().ToString().Substring(0, 6) + extname;
+            tempname = filename1;
+            var path = hostingEnvironment.WebRootPath;
+            Console.WriteLine("path:" + path+"\n");
+            string dir = DateTime.Now.ToString("yyyyMMdd");
+            if (!System.IO.Directory.Exists(path + $@"/upload/{dir}"))
+            {
+                System.IO.Directory.CreateDirectory(path + $@"/upload/{dir}");
+            }
+            filename = path + $@"/upload/{dir}/{filename1}";
+            size += imgFile.Length;
+            using (FileStream fs = System.IO.File.Create(filename.ToString()))
+            {
+                imgFile.CopyTo(fs);
+                fs.Flush();
+            }
+            
+            return Json(new { location = $"/upload/{dir}/{filename1}" }); ;
+        }
+    }
 }

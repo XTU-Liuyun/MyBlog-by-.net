@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/assets/css/nprogress.css" />
     <link rel="stylesheet" href="/assets/css/blog.css" />
     <link rel="stylesheet" href="/assets/css/message.css" />
+    <link rel="shortcut icon" href="/assets/image/bitbug_favicon.ico" />
 </head>
 <body>
     <div class="header">
@@ -68,7 +69,7 @@
                                 <span class="year fs-18">@Model.Blog.CreateDate.ToString("yyyy-mm-dd").Substring(0,4)</span>
                             </div>
                             <div class="content artiledetail" style="border-bottom: 1px solid #e1e2e0; padding-bottom: 20px;">
-                                @Html.Raw(Tool.GZipDecompressString(Model.Blog.Body))
+                                @Html.Raw((Model.Blog.Body))
                                 <div class="copyright mt20">
                                     <p class="f-toe fc-black">
                                         非特殊说明，本文版权归 流云 所有，转载请注明出处.

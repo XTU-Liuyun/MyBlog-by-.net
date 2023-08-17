@@ -1,5 +1,8 @@
-﻿@model MyBlog.Model.Blog
+﻿
+@{
+    @model MyBlog.Model.Blog
 
+}
 <blockquote class="layui-elem-quote">
 	添加文章
 </blockquote>
@@ -42,7 +45,7 @@
             <label class="layui-form-label">文章内容</label>
             <div class="layui-input-block">
                 @Html.TextAreaFor(a=>a.Body,new {placeholder="请输入内容",@class="textarea"})
-               
+                
             </div>
         </div>
         <div class="layui-form-item">
@@ -56,8 +59,8 @@
 </div>
 
 <script>
-    let uploadTimeOut = null
-    let removeFn = null
+    
+    
     tinymce.init
     ({
 
@@ -66,9 +69,11 @@
         language: 'zh-Hans',
         plugins: "paste,image, link",
         toolbar: "paste image link",
-        paste_data_images: true
-        
+        paste_data_images: true,
+        images_upload_url: '/blog/upload',
     });
+    
+    
     
     
 </script>

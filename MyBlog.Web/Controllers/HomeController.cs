@@ -37,7 +37,7 @@ namespace MyBlog.Web.Controllers
         {
             string str = m.Body;
             Console.WriteLine("\n"+str+"\n");
-            m.Body=Tool.GZipCompressString(str);  
+            m.Body=str;  
             if (m.Body.Length == 0)
             {
                 return Content($"<script>alert('评论不能为空!');location.href='/home/message'</script>", "text/html", Encoding.UTF8);

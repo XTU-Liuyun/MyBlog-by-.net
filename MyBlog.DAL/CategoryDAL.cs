@@ -37,7 +37,7 @@ namespace MyBlog.DAL
             using (var connection = ConnectFactory.GetOpenConnection())
             {
                 Console.WriteLine("delid=" + id);
-				int res2 = connection.Execute(@"delete from category where pnumber = (select distinct number from category where id=@id)", new { id = id });
+				int res2 = connection.Execute(@"delete from category where pnumber = (select distinct number from blog where id=@id)", new { id = id });
 				int res=connection.Execute(@"delete from category where id = @id", new { id = id });
                 
 				return res+res2;

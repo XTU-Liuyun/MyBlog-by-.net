@@ -248,3 +248,7 @@ D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\MySqlConnector.dll
 D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\RestSharp.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\System.Text.Json.dll
+D:\Knowledge\MyBlog\MyBlog.Web\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

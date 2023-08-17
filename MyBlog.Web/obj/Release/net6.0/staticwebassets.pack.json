@@ -817,6 +817,10 @@
       "PackagePath": "staticwebassets\\assets\\image\\bg9.jpg"
     },
     {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\bitbug_favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\image\\bitbug_favicon.ico"
+    },
+    {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\assets\\image\\cover\\2018416205043154.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\cover\\2018416205043154.jpg"
     },
@@ -1579,6 +1583,66 @@
     {
       "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\tinymce\\tinymce.min.js",
       "PackagePath": "staticwebassets\\tinymce\\tinymce.min.js"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\028054.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\028054.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\56286a.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\56286a.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\58c09e.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\58c09e.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\840555.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\840555.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\9b245e.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\9b245e.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\9f507e.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\9f507e.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\b35780.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\b35780.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\ba15b1.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\ba15b1.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\bb111a.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\bb111a.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\c36a67.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\c36a67.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\c5af1b.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\c5af1b.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\e336df.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\e336df.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\eb484e.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\eb484e.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\efb626.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\efb626.png"
+    },
+    {
+      "Id": "D:\\Knowledge\\MyBlog\\MyBlog.Web\\wwwroot\\upload\\20230817\\f7a828.png",
+      "PackagePath": "staticwebassets\\upload\\20230817\\f7a828.png"
     },
     {
       "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.MyBlog.Web.Microsoft.AspNetCore.StaticWebAssets.props",

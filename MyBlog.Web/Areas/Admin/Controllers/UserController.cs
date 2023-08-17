@@ -54,7 +54,7 @@ namespace MyBlog.Web.Areas.Admin.Controllers
 			foreach (var item in list)
 			{
 				
-                arr.Add(new { id = item.ID, blogid=item.BlogID, time = item.Time.ToString("yyyy-MM-dd HH:mm"), userid = item.UserID,body=Tool.GZipDecompressString(item.Body),accept=Tool.AcceptToString(item.Accept) });
+                arr.Add(new { id = item.ID, blogid=item.BlogID, time = item.Time.ToString("yyyy-MM-dd HH:mm"), userid = item.UserID,body=(item.Body),accept=Tool.AcceptToString(item.Accept) });
 			}
 
 			return Json(arr);

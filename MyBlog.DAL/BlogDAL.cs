@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MyBlog.DAL
 {
@@ -17,6 +18,7 @@ namespace MyBlog.DAL
     /// </summary>
     public class BlogDAL
     {
+        CategoryDAL categorydal = new CategoryDAL();
         /// <summary>
         /// 增加
         /// </summary>
@@ -131,7 +133,7 @@ namespace MyBlog.DAL
                                                   Title =@Title
                                                   ,Body = @Body
                                                   ,Body_md = @Body_md
-                                                  ,VisitNum = @VisitNum
+                                                  
                                                   ,Number = @Number
                                                   ,Name = @Name
                                                   ,Remark = @Remark
@@ -252,7 +254,18 @@ namespace MyBlog.DAL
                 return res;
             }
         }
-        
+        public int UpdateNumber(string bpid,string pid,string name)
+        {
+            string sql1 = $"update blog set Name='{name}' where number='{bpid}'";
+            
+            string sql2 = $"update blog set Number='{pid}' where number='{bpid}'";
+            using (var connection = ConnectFactory.GetOpenConnection())
+            {
+                int res = connection.ExecuteScalar<int>(sql1);
+                res = connection.ExecuteScalar<int>(sql2);
+                return res;
+            }
+        }
         public string GetMaxVisitNum()
         {
             string sql = "select Title from blog where VisitNum = (select max(VisitNum) from blog)";
@@ -263,5 +276,14 @@ namespace MyBlog.DAL
             }
 
         }
-    }
+		public int Decompression(int id,string str)
+		{
+			using (var connection = ConnectFactory.GetOpenConnection())
+			{
+                
+				int res = connection.Execute($"update blog set body='{str}' where id = {id}");
+				return res;
+			}
+		}
+	}
 }

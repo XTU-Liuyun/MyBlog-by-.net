@@ -63,6 +63,10 @@
 							<i class="layui-icon">&#xe693;</i>
 							删除
 						</a>
+						<a href="javascript:void(0);" onclick="decompression(@blog.ID)">
+						<i class="layui-icon">&#xe693;</i>
+						更新
+						</a>
 					</td>
 				</tr>
 			}*@
@@ -134,6 +138,10 @@
 					html += '		<i class="layui-icon" >&#xe693; </i>';
 					html += '		删除';
 					html += '		</a>';
+					//html += '		<a href = "javascript:void(0);" onclick = "decompression(' + blog.id + ')" >';
+					//html += '		<i class="layui-icon" >&#xe693; </i>';
+					//html += '		更新';
+					//html += '		</a>';
 					html += '	</td>';
 					html += '</tr>';
 				})
@@ -186,7 +194,22 @@
 			})
 		})
 	}
-	
+	function decompression(id) 
+	{
+		layui.use('layer', function () 
+		{
+			var layer = layui.layer;
+			var $ = layui.jquery;
+			layer.confirm('是否确认反解压?', function () 
+			{
+				var url = "/Admin/Blog/Decompression/" + id;
+				$.post(url, function (data) 
+				{
+					layer.alert(data, function () { location.reload(); });
+				})
+			})
+		})
+	}
 	layui.use(function () {
 		var laydate = layui.laydate;
 		// 渲染

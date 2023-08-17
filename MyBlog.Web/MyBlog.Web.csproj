@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +36,11 @@
 
   <ItemGroup>
     <None Include="Views\Home\Login.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\upload\" />
+    <Folder Include="wwwroot\upload\20230817\" />
   </ItemGroup>
 
 </Project>
